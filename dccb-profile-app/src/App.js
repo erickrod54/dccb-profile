@@ -13,23 +13,21 @@ import Footer from "./components/footer.component";
 import Error from "./pages/error-page";
 
 /**
- * DCCB - Portfolio version 1 - Features: 
+ * DCCB - Portfolio version 2 - Features: 
  * 
- *          --> Implementing Routing
- *          --> Importing Components
- *          --> Creating an 'Error' Page
- *          --> Installing styled and router-dom 
- *              libraries.
- *          --> Making global.styles to clear styles
- *          --> restructuring the whole application
+ *          --> Removing fragments.
  * 
- * Note:Here i can handle all the routting, and other features
- * as sharedlayout, there is an issue pending to solve with it
+ * Note 'key' prop warning refers to the existence of an 'id'
+ * for each child -this is applied to handle mapping a list
+ * of elements this case the links that i am mapping for the 
+ * NavBar-
+ * 
+ * Sometimes applying fragments can throw 'key' prop warnings
  */
 
 function App() {
   return (
-    <>
+  
       <Router>
       
         <Routes>
@@ -44,7 +42,7 @@ function App() {
         </Routes>
       <Footer />
       </Router>
-    </>
+    
   );
 }
 
