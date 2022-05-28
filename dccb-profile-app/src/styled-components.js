@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+/**DCCB - Portfolio version 3 - 'styled-components' js
+ * file - Features: 
+ * 
+ *          --> Replacing hex colors code by 
+ *              --variables, so they can change 
+ *              once 'theme' is set.
+ * 
+ * Note: By this point i can start to clean the code
+ * for the css sheet.
+ */
+
 export const NavLinks = styled.div`
 /**when it comes to 'Theming' this will have the same
 * styles that hipsterButton but wil colors of this app*/
@@ -19,12 +30,24 @@ export const NavLinks = styled.div`
       font-size: 1.5rem;
       text-transform: capitalize;
       p{
-        color: white;
+        color: var(--clr-font-white);
         &:hover{
-          color: blanchedalmond;
+          color: var(--blanched-almond);
           text-decoration: underline;
         }
       }
+    }
+
+    .btn-toggle{
+      margin-left: 15rem;
+      background-color: var(--blanched-almond);
+      color: var(--crimson-red);
+      font-weight: 700;
+
+        &:hover{
+          background-color: var(--dark-blood-red);
+          color: var(--blanched-almond);
+        }
     }
     
     @media screen and (max-width: 500px) {
@@ -54,4 +77,8 @@ export const SectionOutlet = styled.div`
     width: 95vw;
   }
 }
+`
+
+export const HeaderButton = styled.button`
+  background-color: var(--clr-font-white);
 `
