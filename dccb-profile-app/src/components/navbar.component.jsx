@@ -3,36 +3,38 @@ import { links } from "../data";
 import { NavLinks } from "../styled-components";
 import { NavLink } from "react-router-dom";
 /**
- * DCCB - Portfolio version 1 - NavBar Component- Features: 
+ * DCCB - Portfolio version 2 - NavBar Component- Features: 
  * 
- *          --> Building the NavBAr Component.
+ *          --> Fixing 'key' prop warning.
  * 
- * Note:Here i can handle all the routting, and other features
- * as sharedlayout, there is an issue pending to solve with it
+ * Note 'key' prop warning refers to the existence of an 'id'
+ * for each child -this is applied to handle mapping a list
+ * of elements this case the links that i am mapping for the 
+ * NavBar-
+ * 
+ * Sometimes applying fragments can throw 'key' prop warnings
  */
 
 const NavBar = () => {
 
     return(
         <>
-       
         <NavLinks >
-            {links.map((link, index) => {
+            {links.map((link) => {
                 
-                const { url, text } = link;
+                const { url, text, id } = link;
                 return(                                                                     
-                    <ul>
-                        <li>
+                    <ul key={id}> 
+                        <li >
                         <NavLink to={url} 
-                              key={index} className={( { isActive } ) => ( isActive ? 'link active' : 'link')}>
+                                 className={( { isActive } ) => ( isActive ? 'link active' : 'link')}>
                                   <p>{text}</p></NavLink>
                         </li>
                     </ul>    
                 )
             })}
         </NavLinks>
-        
-        </>
+        </>     
     )
 
 }
