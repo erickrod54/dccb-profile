@@ -1,10 +1,14 @@
 import React from "react";
+import Projects from "./projects-page";
 /**
- * DCCB - Portfolio version 1 - Home Page - Features: 
+ * DCCB - Portfolio version 4 - Home Page - Features: 
  * 
- *          --> Implementing Basic Component for HomePage Component
+ *          --> Importing and Placing 'Projects' 
+ *              Component.
  * 
- * Note:This component will handle everything related to home
+ * Note: This will render the 'Projects' Component on
+ * 'HomePage' component.
+ * 
  */
 
 const  HomePage = () => {
@@ -12,6 +16,7 @@ const  HomePage = () => {
     return(
         <>
             <h2>The Home Page</h2>
+            <Projects />
         </>
     )
 }
