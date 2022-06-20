@@ -3,24 +3,15 @@ import { links } from "../data";
 import { NavLinks } from "../styled-components";
 import { NavLink } from "react-router-dom";
 
-/**
- * DCCB - Portfolio version 3 - NavBar Component- Features: 
+/**DCCB - Portfolio version 5 - NavBar Component- 
+ * Features: 
  * 
- *          --> Building state to handle 'theme'.
+ *          --> Implementing "url-links" style class.
  * 
- *          --> Building useEffect to set 'theme'   
- *              using the 'documentElement' object.
+ *          --> Implementing "right-side" style class.
  * 
- *          --> Building 'toggleTheme' feature to
- *              trigger the switch between 'dark-theme'
- *              and 'light-theme'
- * 
- * Note 'key' prop warning refers to the existence of an 'id'
- * for each child -this is applied to handle mapping a list
- * of elements this case the links that i am mapping for the 
- * NavBar-
- * 
- * Sometimes applying fragments can throw 'key' prop warnings
+ * Note implementing this two style class i handle better
+ * general and specific styles for them.
  */
 
 const NavBar = () => {
@@ -48,7 +39,7 @@ const NavBar = () => {
                 const { url, text, id } = link;
                 return(                                                                     
                     <ul key={id}> 
-                        <li >
+                        <li className="url-links">
                         <NavLink to={url} 
                                  className={( { isActive } ) => ( isActive ? 'link active' : 'link')}>
                                   <p>{text}</p></NavLink>
@@ -58,11 +49,13 @@ const NavBar = () => {
             })}
             {/**here i build the button to switch betwwen 
              * one theme and another*/}
-            <button 
-                className="btn btn-toggle" 
-                onClick={toggleTheme}>
-                toogle
-            </button>
+             <div className="right-side">
+                <button 
+                    className="btn btn-toggle" 
+                    onClick={toggleTheme}>
+                    toogle
+                </button> 
+             </div>
         </NavLinks>
         </>     
     )
