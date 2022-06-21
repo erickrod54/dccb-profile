@@ -1,21 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 3 - 'global.styles' js 
+/**DCCB - Portfolio version 5 - 'global.styles' js 
  * file - Features: 
  * 
- *          --> Building css 'DccbGlobalStyles' to 
+ *          --> Continue css 'DccbGlobalStyles' to 
  *              start clean css sheet.
  * 
- *          --> Building 'light-theme' css class
- *              with their color set and 'section'
- *              'container' size.
+ *          --> Removing 'projects' class style.
  * 
- *          --> Building 'dark-theme' css class
- *              with their color set and 'section'
- *              'container' size.
+ *          --> Removing 'project' class style.
  * 
- * Note: By this point i can start to clean the code
- * for the css sheet.
+ * Note: Pending to decide if these classes will be
+ * become in styled component.
+ * 
+ * Pending to add a border shadow effect to 'project'
+ * class style, also 'cursor pointer'
  */
 const DccbGlobalStyles = createGlobalStyle`
 /*
@@ -128,6 +127,9 @@ Variables
   /**container-section size */
   --max-width: 1170px;
 }
+
+
+
 
 /*
 =============== 
