@@ -1,34 +1,34 @@
 import React from "react";
 import SingleProject from "../components/single-project.component";
-import { projects } from '../data'
-/**
- * DCCB - Portfolio version 4 - Projects Page - Features: 
- * 
- *          --> Mapping 'SingleProject' Component.
- * 
- *          --> Spreading 'project' and setting 'id'
- *              for every 'SingleProject'
+import { projects } from '../data';
+import { ProjectsWrapper } from '../styled-components'
+
+/** DCCB - Portfolio version 5 - Projects Page - Features: 
  * 
  *          --> Wrapping the 'Projects' with a 
- *             'projects' class Style.
+ *             'ProjectsWrapper' Style Component.
  * 
- * Note: this component is getting render in 'home-page'
- * so will display the projects in the main page.
+ * Note: this Style components has specific styles
+ * for the 'projects-page' 
  */
 const Projects = () => {
+    
 
     return(
         <>
-            <h2>Projects Page</h2>
-            <article className='projects'>
+            <ProjectsWrapper>
+            <h2>All Projects ({ projects.length })</h2>
 
+            <div className="projects-grid">
               {projects.map((project) => {
                   console.log(project)
                   return <SingleProject 
-                  {...project} key={project.id}/>
+                  {...project} key={project.id }/>
               })}      
+            </div>
+            </ProjectsWrapper>
 
-            </article>
+           
         </>
     )
 }
