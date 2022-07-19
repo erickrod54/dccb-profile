@@ -6,39 +6,49 @@ import { BrowserRouter as Router,
 import HomePage from "./pages/home-page";
 import AboutMe from "./pages/about.me-page";
 import Projects from "./pages/projects-page";
-import SingleProject from "./components/single-project.component";
+import Project from "./components/project.component";
+import DesignServices from "./pages/services-page";
 
-import SharedLayout from "./components/shared-layout.component";
+
+import NavBar from './components/navbar.component';
+import SideBar from "./components/sidebar.component";
 import Footer from "./components/footer.component";
 import Error from "./pages/error-page";
 
-/**
- * DCCB - Portfolio version 2 - Features: 
+/** DCCB - Portfolio version 6 - Features: 
  * 
- *          --> Removing fragments.
+ *          --> Adding the '/design-services'
+ *              new route.
+ *  
+ *          --> Renaming 'SingleProject' as 
+ *              'Project' Component.
  * 
- * Note 'key' prop warning refers to the existence of an 'id'
- * for each child -this is applied to handle mapping a list
- * of elements this case the links that i am mapping for the 
- * NavBar-
+ *          --> Removing 'SharedLayout' 
+ *              Route and set in up the
+ *              route at 'HomePage'
  * 
- * Sometimes applying fragments can throw 'key' prop warnings
+ *          --> Importing and Placing 
+ *              'SideBar' Component.
+ * 
+ * Note: SideBar will have a navigation acroos
+ * the site as NavBar and Footer.
  */
 
 function App() {
   return (
   
       <Router>
-      
+        <NavBar />
+        <SideBar />
         <Routes>
-            <Route path='/' element={<SharedLayout />}>
-              <Route index element={<HomePage />}/> 
+      
+              <Route path='/' element={<HomePage />}/> 
               <Route path='/about-me' element={<AboutMe />}/>
               <Route path='/projects' element={<Projects />}/>
-              <Route path='/projects/:projectId' element={<SingleProject />}/>
+              <Route path='/projects/:id' element={<Project />}/>
+              <Route path='/design-services' element={<DesignServices />}/>
               <Route path='*' element={<Error />}/>
-            
-            </Route>
+              
         </Routes>
       <Footer />
       </Router>
