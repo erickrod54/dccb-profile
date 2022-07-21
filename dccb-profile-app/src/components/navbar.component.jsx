@@ -1,65 +1,139 @@
-import React, { useEffect, useState } from "react";
-import { links } from "../data";
-import { NavLinks } from "../styled-components";
-import { NavLink } from "react-router-dom";
+import React from "react";
+import logo from '../assets/dccb_logo_temp.svg';
+import styled from "styled-components";
 
-/**DCCB - Portfolio version 5 - NavBar Component- 
+import { useAppContext } from '../context/dccb_profile_context';
+import { Link } from 'react-router-dom';
+//Sidebar toogle
+import { CgMenuGridR } from 'react-icons/cg'
+import NavBarButtons from "./navbar-buttons.component";
+
+/**DCCB - Portfolio version 6 - NavBar Component- 
  * Features: 
  * 
- *          --> Implementing "url-links" style class.
+ *          --> Refactoring 'NavBar' Component.
  * 
- *          --> Implementing "right-side" style class.
+ *          --> Migrating to the context 
+ *              'toggleTheme' feature.
  * 
- * Note implementing this two style class i handle better
- * general and specific styles for them.
+ *          --> Migrating 'links' data import
+ *              to the 'context' js.
+ * 
+ *          --> Importing and Placing 'NavBarButtons'
+ *              Component.
+ * 
+ * Note: This version implements context api to provide
+ * features and data, also includes a total refactor of
+ * 'Navbar' Component
+ * 
+ * The 'NavBarButtons' Component will keep features
+ * as login, and in next versions will incroporate 
+ * 'toggleTheme' and more.
+ * 
+ *  By the momment the 'NavContainer' Style Component 
+ * will be set in each component, when the UI design 
+ * get done they will renamed and live at 
+ * 'styled-components.js'
  */
 
 const NavBar = () => {
-    /**here i build the state for the theme */
-    const [ theme, setTheme ] = useState('light-theme');
 
-    /**here i build the 'useEffect' to set theme*/
-    useEffect(() => {
-        document.documentElement.className = theme
-    }, [theme])
-
-    const toggleTheme = () => {
-        if (theme === 'dark-theme') {
-            setTheme('light-theme')
-        }else{
-            setTheme('dark-theme')
-        }
-    }
+    const { links, openSidebar } = useAppContext()
 
     return(
-        <>
-        <NavLinks >
-            {links.map((link) => {
-                
-                const { url, text, id } = link;
-                return(                                                                     
-                    <ul key={id}> 
-                        <li className="url-links">
-                        <NavLink to={url} 
-                                 className={( { isActive } ) => ( isActive ? 'link active' : 'link')}>
-                                  <p>{text}</p></NavLink>
-                        </li>
-                    </ul>    
-                )
-            })}
-            {/**here i build the button to switch betwwen 
-             * one theme and another*/}
-             <div className="right-side">
-                <button 
-                    className="btn btn-toggle" 
-                    onClick={toggleTheme}>
-                    toogle
-                </button> 
-             </div>
-        </NavLinks>
-        </>     
+        <NavContainer>
+            <div className='nav-center'>
+                <div className='nav-header'>
+                    <Link to='/'>
+                        <img src={logo} alt='dccb temporal logo'/>
+                    </Link>
+                    <button typeof='button' className='nav-toggle'>
+                        <CgMenuGridR onClick={openSidebar}/>      
+                    </button>
+                </div>
+                <ul className='nav-links'>
+                    {links.map((link) => {
+                        const { id, text, url } = link;
+
+                        return(
+                            <li key={id}>
+                                <Link to={url}>{text}</Link>
+                            </li>
+                        )
+                    })}
+                </ul>
+                <NavBarButtons />
+            </div>
+        </NavContainer>     
     )
 
 }
+
+const NavContainer = styled.nav`
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .nav-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: var(--max-width);
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 175px;
+      margin-left: -15px;
+    }
+  }
+  .nav-toggle {
+    background: transparent;
+    border: transparent;
+    color: var(--clr-primary-11);
+    cursor: pointer;
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+  .nav-links {
+    display: none;
+  }
+  .cart-btn-wrapper {
+    display: none;
+  }
+  @media (min-width: 992px) {
+    .nav-toggle {
+      display: none;
+    }
+    .nav-center {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      li {
+        margin: 0 0.5rem;
+      }
+      a {
+        color: var(--clr-grey-3);
+        font-size: 1rem;
+        text-transform: capitalize;
+        letter-spacing: var(--spacing);
+        padding: 0.5rem;
+        &:hover {
+          border-bottom: 2px solid var(--clr-primary-13);
+        }
+      }
+    }
+    .cart-btn-wrapper {
+      display: grid;
+    }
+  }
+`
 
 export default NavBar;
