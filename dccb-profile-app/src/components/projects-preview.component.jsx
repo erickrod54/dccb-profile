@@ -1,47 +1,81 @@
 import React from "react";
-import SingleProject from "./single-project.component";
-import { Link } from "react-router-dom";
-import { projects } from '../data'
+import Project from "./project.component";
+import styled from "styled-components";
 import { ProjectsWrapper } from "../styled-components";
+import { useProjectsContext } from '../context/projects_context'
 
-/**DCCB - Portfolio version 5 - 'ProjectsPreview' 
+/**DCCB - Portfolio version 6 - 'ProjectsPreview' 
  * Component- Features: 
  * 
- *     --> Filtering 'projects' with a limit for 5
- *        elements.
+ *     --> Destructuring 'projects' data from
+ *         'useProjectsContext()' hook
  * 
- *     --> Mapping for each project on 'SingleProject'
- *         Components.
+ *     --> Replacing 'filter' method for a mapgit
+ *         with a 'slice' of the 'projects' 
+ *         data
  * 
- *     --> Importing and Placing 'ProjectsWrapper' Style
- *         Component to set styles to 'ProjectsPreview'.
+ *     --> Refactoring styles 'ProjectsPreview'
+ *         Component
+ * 
+ *     --> Destructuring 'projects' data from 
+ *        the provider 'useProjectsContext' 
  * 
  * Note: Filtering 'projects' with a limit for 5
  * elements and mapping them is made in order to
  * create a preview of the whole list and displaying
  * it.
+ * 
+ * By the momment the 'NavContainer' Style Component 
+ * will be set in each component, when the UI design 
+ * get done they will renamed and live at 
+ * 'styled-components.js'
  */
 const ProjectsPreview = () => {
+
+    const { projects } = useProjectsContext()
+    console.log('this is projects data provided by ProjectsProvider ==> ', projects )
 
     return(
         <>
         <ProjectsWrapper>
-        <h2>projects preview ( 4 of {projects.length})</h2>
-            <div className="projects-grid">
-                {projects.filter((project) => project.id < 5)
-                .map((project) => {
-                    return <SingleProject 
-                    {...project} key={project.id }/>
-                  })}
-              <button>
-               <Link to='/projects'>view more</Link>
-              </button>
-           </div>
+        <Wrapper className="section">
+        <div className="title">
+            <h2>featured projects</h2>
+            <div className="underline"/>    
+        </div>
+           <div className="section-center featured">
+                {projects.slice(0,6).map((project) => {
+                    return <Project key={project.id} 
+                    {...project}/>
+                })}
+            </div>
+        </Wrapper>
         </ProjectsWrapper>
-        
-        
         </>
     )
 }
+
+const Wrapper = styled.section`
+  background: var(--clr-grey-10);
+  .featured {
+    margin: 4rem auto;
+    display: grid;
+    gap: 2.5rem;
+    img {
+      height: 225px;
+    }
+  }
+  .btn {
+    display: block;
+    width: 148px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  @media (min-width: 576px) {
+    .featured {
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
+  }
+`
 
 export default ProjectsPreview;
