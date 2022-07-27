@@ -1,17 +1,20 @@
 import React from "react";
 /**
- * DCCB - Portfolio version 1 - About Page - Features: 
+ * DCCB - Portfolio version 6 - About Page - Features: 
  * 
- *          --> Implementing About Component 
+ *          --> Setting 'page' style class to 
+ *              About Component 
  * 
- * Note:Here i can handle all the routting, and other features
- * as sharedlayout, there is an issue pending to solve with it
+ * Note: In next verions i'll start to build the
+ * About Component UI.
  */
 const AboutMe = () => {
 
     return(
         <>
+        <div className="page">
             <h2>About me Page</h2>
+        </div>
         </>
     )
 }
