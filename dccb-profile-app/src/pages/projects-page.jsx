@@ -1,34 +1,18 @@
 import React from "react";
-import SingleProject from "../components/single-project.component";
-import { projects } from '../data';
-import { ProjectsWrapper } from '../styled-components'
 
-/** DCCB - Portfolio version 5 - Projects Page - Features: 
+/** DCCB - Portfolio version 6 - Projects Page - Features: 
  * 
- *          --> Wrapping the 'Projects' with a 
- *             'ProjectsWrapper' Style Component.
+ *          --> Pending to add content and Wrapper.
  * 
- * Note: this Style components has specific styles
- * for the 'projects-page' 
+ * Note:This Page will contain the project collection. 
+ * 
  */
 const Projects = () => {
     
 
     return(
         <>
-            <ProjectsWrapper>
-            <h2>All Projects ({ projects.length })</h2>
-
-            <div className="projects-grid">
-              {projects.map((project) => {
-                  console.log(project)
-                  return <SingleProject 
-                  {...project} key={project.id }/>
-              })}      
-            </div>
-            </ProjectsWrapper>
-
-           
+          <h2>projects page</h2>
         </>
     )
 }
