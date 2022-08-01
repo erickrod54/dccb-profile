@@ -6,7 +6,8 @@ import { BrowserRouter as Router,
 import HomePage from "./pages/home-page";
 import AboutMe from "./pages/about.me-page";
 import Projects from "./pages/projects-page";
-import Project from "./components/project.component";
+import SingleProjectPage from './pages/single.project-page'
+//import Project from "./components/project.component";
 import DesignServices from "./pages/services-page";
 
 
@@ -15,20 +16,12 @@ import SideBar from "./components/sidebar.component";
 import Footer from "./components/footer.component";
 import Error from "./pages/error-page";
 
-/** DCCB - Portfolio version 6 - Features: 
+/** DCCB - Portfolio version 7 - Features: 
  * 
- *          --> Adding the '/design-services'
- *              new route.
- *  
- *          --> Renaming 'SingleProject' as 
- *              'Project' Component.
- * 
- *          --> Removing 'SharedLayout' 
- *              Route and set in up the
- *              route at 'HomePage'
- * 
- *          --> Importing and Placing 
- *              'SideBar' Component.
+ *          --> Replacing 'Project' element
+ *              in '/projects/:id' path for 
+ *              'SingleProjectPage' Component 
+ *               in order to render it.
  * 
  * Note: SideBar will have a navigation acroos
  * the site as NavBar and Footer.
@@ -45,7 +38,7 @@ function App() {
               <Route path='/' element={<HomePage />}/> 
               <Route path='/about-me' element={<AboutMe />}/>
               <Route path='/projects' element={<Projects />}/>
-              <Route path='/projects/:id' element={<Project />}/>
+              <Route path='/projects/:id' element={<SingleProjectPage />}/>
               <Route path='/design-services' element={<DesignServices />}/>
               <Route path='*' element={<Error />}/>
               
