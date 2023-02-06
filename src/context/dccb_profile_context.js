@@ -1,31 +1,14 @@
 import React, { useContext, useState, useEffect, useReducer } from "react";
 import reducer from '../reducers/dccb_profile_reducers';
-import { links } from '../data'
+import { arqpictures, links } from '../data'
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../utils/actions";
 
-/**DCCB - Portfolio version 6 - 'dccb_profile_context' file - 
+/**DCCB - Portfolio version 7.02 - 'dccb_profile_context' file - 
  * Features: 
  * 
- *          --> Building context for 'dccb_profile_context'.
+ *          --> Importingn and providing 'arqpictures'
  * 
- *          --> Migrating 'toggleTheme' from 'Navbar'
- *              Component to provide it throught
- *              the context.
- *          
- *          --> Building 'initialState' with a  
- *              'isSidebarOpen' state value.
- * 
- *          --> Building 'openSidebar' feature and
- *              providing it using the 'AppProvider'
- * 
- *          --> Building 'closeSidebar' feature and
- *              providing it using the 'AppProvider'
- * 
- * Note: the 'dccb_profile_context' will the context
- * for the whole app.
- * 
- * the 'isSidebarOpen' state value will change in order
- * to toggle the SideBar.
+ * Note: pending to modify context name
  * */
 
 /**here i build the initial state*/
@@ -74,7 +57,8 @@ export const AppProvider = ({ children }) => {
                 theme,
                 toggleTheme,
                 openSidebar,
-                closeSidebar
+                closeSidebar,
+                arqpictures
                 }}>
             {children}
         </AppContext.Provider>
