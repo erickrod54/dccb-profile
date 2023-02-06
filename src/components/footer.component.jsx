@@ -1,33 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 /**
- * DCCB - Portfolio version 6 - Footer Component- Features: 
+ * DCCB - Portfolio version 7.02 - Footer Component- Features: 
  * 
- *          --> Building 'Footer' Component.
+ *          --> Wrapping the component in a 'footer-section'.
  * 
- *          --> Styling the 'Footer' Component
- *              using the wrapper.
+ *          --> Changing versioning to two digits
  * 
- * Note: The '&copy' get the copyright symbol and the
- * 'new Date().getFullYear()' the JavaScript ES6 that 
- * gets me the Year. 
- * 
- * This component will have social in next versions
- * , site map, and related links.
- * 
- * By the momment the Wrapper Style Component will 
- * be set in each component, when the UI design get
- * done they will renamed and live at 
- * 'styled-components.js'
+ * Note: fter this version i will use the 'id' for the 
+ * new layout.
  */
+
 const Footer = () => {
 
     return(
+      <section id='footer-section'>
         <Wrapper>
             <h5>&copy; { new Date().getFullYear()}</h5>
             <span> DCCB  |  Arquitecture and Design </span>
             <h5>  All Rights reserved</h5>
         </Wrapper>
+      </section>
     )
 }
 
