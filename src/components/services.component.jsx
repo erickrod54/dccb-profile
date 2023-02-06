@@ -1,19 +1,22 @@
 import React from "react";
 
-/**DCCB - Portfolio version 6 - 'ProjectsPreview' 
+/**DCCB - Portfolio version 7.02 - 'ServicesComponent' 
  * Component- Features: 
  * 
- *     --> Building basic component
- *        for services 
+ *     --> Wrapping the component in a 
+ *         'services-component-section'.
  * 
- * Note: This component in going to be use
- * to build the specific services that later 
- * will be added to the 'services-page'
+ *      --> Changing versioning to two digits
+ * 
+ * Note: fter this version i will use the 'id' for the 
+ * new layout.
  */
 const ServicesComponent = () => {
 
     return(
-        <h2>Services Component</h2>
+        <section id='services-component-section'>
+            <h2>Services Component</h2>
+        </section>
     )
 }
 
