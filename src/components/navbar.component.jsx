@@ -8,32 +8,15 @@ import { Link } from 'react-router-dom';
 import { CgMenuGridR } from 'react-icons/cg'
 import NavBarButtons from "./navbar-buttons.component";
 
-/**DCCB - Portfolio version 6 - NavBar Component- 
+/**DCCB - Portfolio version 7.02 - NavBar Component- 
  * Features: 
  * 
- *          --> Refactoring 'NavBar' Component.
+ *      --> Wrapping the component in a 'nav-section'.
  * 
- *          --> Migrating to the context 
- *              'toggleTheme' feature.
+ *      --> Changing versioning to two digits
  * 
- *          --> Migrating 'links' data import
- *              to the 'context' js.
- * 
- *          --> Importing and Placing 'NavBarButtons'
- *              Component.
- * 
- * Note: This version implements context api to provide
- * features and data, also includes a total refactor of
- * 'Navbar' Component
- * 
- * The 'NavBarButtons' Component will keep features
- * as login, and in next versions will incroporate 
- * 'toggleTheme' and more.
- * 
- *  By the momment the 'NavContainer' Style Component 
- * will be set in each component, when the UI design 
- * get done they will renamed and live at 
- * 'styled-components.js'
+ * Note: fter this version i will use the 'id' for the 
+ * new layout.
  */
 
 const NavBar = () => {
@@ -41,6 +24,7 @@ const NavBar = () => {
     const { links, openSidebar } = useAppContext()
 
     return(
+      <section id='nav-section'>
         <NavContainer>
             <div className='nav-center'>
                 <div className='nav-header'>
@@ -64,7 +48,8 @@ const NavBar = () => {
                 </ul>
                 <NavBarButtons />
             </div>
-        </NavContainer>     
+        </NavContainer>
+        </section>     
     )
 
 }
