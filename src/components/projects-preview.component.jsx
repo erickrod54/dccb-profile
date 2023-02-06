@@ -33,7 +33,7 @@ import { useProjectsContext } from '../context/projects_context'
 const ProjectsPreview = () => {
 
     const { projects } = useProjectsContext()
-    console.log('this is projects data provided by ProjectsProvider ==> ', projects )
+    //console.log('this is projects data provided by ProjectsProvider ==> ', projects )
 
     return(
         <>

@@ -11,11 +11,9 @@ import React from "react";
 const AboutMe = () => {
 
     return(
-        <>
-        <div className="page">
+        <section>
             <h2>About me Page</h2>
-        </div>
-        </>
+        </section>
     )
 }
 

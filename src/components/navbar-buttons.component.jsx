@@ -32,7 +32,7 @@ const NavBarButtons = () => {
 
     const { toggleTheme } = useAppContext()
 
-    console.log('toggle theme value ==> ', toggleTheme)
+    //console.log('toggle theme value ==> ', toggleTheme)
 
     return(
         <Wrapper className='cart-btn-wrapper'>
