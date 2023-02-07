@@ -11,9 +11,8 @@ import NavBarButtons from "./navbar-buttons.component";
 /**DCCB - Portfolio version 7.02 - NavBar Component- 
  * Features: 
  * 
- *      --> Wrapping the component in a 'nav-section'.
- * 
- *      --> Changing versioning to two digits
+ *      --> Clearing local styles to get some global
+ *          styles.
  * 
  * Note: fter this version i will use the 'id' for the 
  * new layout.
@@ -26,6 +25,7 @@ const NavBar = () => {
     return(
       <section id='nav-section'>
         <NavContainer>
+          <nav className="header_main-nav">
             <div className='nav-center'>
                 <div className='nav-header'>
                     <Link to='/'>
@@ -48,6 +48,7 @@ const NavBar = () => {
                 </ul>
                 <NavBarButtons />
             </div>
+          </nav>
         </NavContainer>
         </section>     
     )
@@ -63,12 +64,12 @@ const NavContainer = styled.nav`
   .nav-center {
     width: 90vw;
     margin: 0 auto;
-    max-width: var(--max-width);
   }
   .nav-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     img {
       width: 175px;
       margin-left: -15px;
@@ -104,16 +105,7 @@ const NavContainer = styled.nav`
       li {
         margin: 0 0.5rem;
       }
-      a {
-        color: var(--clr-grey-3);
-        font-size: 1rem;
-        text-transform: capitalize;
-        letter-spacing: var(--spacing);
-        padding: 0.5rem;
-        &:hover {
-          border-bottom: 2px solid var(--clr-primary-13);
-        }
-      }
+      
     }
     .cart-btn-wrapper {
       display: grid;
