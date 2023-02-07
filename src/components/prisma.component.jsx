@@ -4,9 +4,13 @@ import { useAppContext } from "../context/dccb_profile_context";
 
 /** DCCB - Portfolio version 7.02 - Prisma Component- Features: 
  * 
- *      --> Wrapping the component in a 'prisma-section'.
+ *      --> Destructuring 'arqpictures' from the context.
  * 
- *      --> Changing versioning to two digits
+ *      --> Writing an introduction message.
+ * 
+ *      --> Adding 'img-container-section' to set grid styles.
+ * 
+ *      --> clearing media queries.
  * 
  * Note: fter this version i will use the 'id' for the 
  * new layout.
@@ -39,18 +43,20 @@ const Prisma = () => {
               </p> 
               
               <p>
-                I see myself <strong>as a valuable asset to any drafting team</strong>. 
-                <strong>My goal</strong> is <strong>to join a prestigious design company</strong> in 
+                I see myself <strong>as a valuable asset to any drafting team </strong>. 
+                and <strong>My goal</strong> is <strong> to join a prestigious design company</strong> in 
                 the <strong>United States</strong> and <strong>bring her wealth of knowledge and 
                 skill to contribute to the success of new projects</strong>. 
                 Take a look around and <strong>discover the portfolio of this talented 
                 architect and learn why she is the right fit for your next project</strong>.
               </p>
           </article>
+          <section id='img-container-section'>
           <article className='img-container'>
               <img src={arqroses} alt='nice table' className='main-img'/>
               <img src={awards} alt='person working' className='accent-img'/>
           </article>
+          </section>
         </Wrapper>
       </section>
       )
@@ -69,27 +75,14 @@ const Wrapper = styled.section`
     line-height: 2;
     max-width: 45em;
     margin-bottom: 2rem;
-    color: var(--clr-grey-5);
-    font-size: 1rem;
+    
   }
-  @media (min-width: 992px) {
-    height: calc(100vh - 5rem);
-    grid-template-columns: 1fr 1fr;
-    gap: 8rem;
-    h1 {
-      margin-bottom: 2rem;
-    }
-    p {
-      font-size: 1.25rem;
-    }
-    .hero-btn {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-    }
-    .img-container {
+
+  .img-container {
       display: block;
       position: relative;
     }
+
     .main-img {
       width: 100%;
       height:600px;
@@ -98,6 +91,7 @@ const Wrapper = styled.section`
       display: block;
       object-fit: cover;
     }
+  
     .accent-img {
       position: absolute;
       bottom: 1;
@@ -106,6 +100,7 @@ const Wrapper = styled.section`
       transform: translateX(-50%);
       border-radius: var(--radius);
     }
+
     .img-container::before {
       content: '';
       position: absolute;
@@ -116,7 +111,7 @@ const Wrapper = styled.section`
       left: -8%;
       border-radius: var(--radius);
     }
-  }
 `
 
 export default Prisma;
+
