@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect, useReducer } from "react";
 import reducer from '../reducers/dccb_profile_reducers';
-import { arqpictures, links } from '../data'
+import { arqpictures, brands, links } from '../data'
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../utils/actions";
 
 /**DCCB - Portfolio version 7.02 - 'dccb_profile_context' file - 
  * Features: 
  * 
- *          --> Importingn and providing 'arqpictures'
+ *          --> Importing and providing 'brands'
  * 
  * Note: pending to modify context name
  * */
@@ -58,7 +58,8 @@ export const AppProvider = ({ children }) => {
                 toggleTheme,
                 openSidebar,
                 closeSidebar,
-                arqpictures
+                arqpictures,
+                brands
                 }}>
             {children}
         </AppContext.Provider>
