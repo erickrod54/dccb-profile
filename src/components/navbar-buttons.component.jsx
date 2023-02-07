@@ -1,6 +1,4 @@
 import React from "react";
-import { useAppContext } from '../context/dccb_profile_context';
-
 import styled from "styled-components";
 
 //import { CgShoppingCart } from 'react-icons/cg'
@@ -13,15 +11,12 @@ import { BsPersonCircle } from 'react-icons/bs'
 //Already login
 //import { FaUserCircle } from 'react-icons/fa'
 
-/**DCCB - Portfolio version 6 - NavBar Component- 
+/**DCCB - Portfolio version 7.02 - NavBar Component- 
  * Features: 
  * 
- *          --> Destructuring 'toggleTheme' 
- *              functionality from the context.
- *              - testing by this version-
+ *   --> Changing 'h2' tag to get styles.
  * 
- *          --> Placing a 'sign in / sigup' message
- *              with a user icon to set the UI.
+ *   --> Changing versioning to two digits. 
  * 
  * Note: This Component will keep the buttons
  * for the navBar as login by the moment -later
@@ -30,14 +25,14 @@ import { BsPersonCircle } from 'react-icons/bs'
 
 const NavBarButtons = () => {
 
-    const { toggleTheme } = useAppContext()
+    //const { toggleTheme } = useAppContext()
 
     //console.log('toggle theme value ==> ', toggleTheme)
 
     return(
         <Wrapper className='cart-btn-wrapper'>
           <div className="sign-in-up">
-            <h6>sign in / sign up</h6>
+            <h2>sign in / sign up</h2>
           </div>
             <button type="button" className="auth-btn">
               <BsPersonCircle/> 
