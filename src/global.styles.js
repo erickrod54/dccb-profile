@@ -1,15 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 6 - 'global.styles' js 
+/**DCCB - Portfolio version 7.02 - 'global.styles' js 
  * file - Features: 
  * 
- *          --> Continue css 'DccbGlobalStyles' to 
- *              start clean css sheet.
+ *       --> Building Layout grid for the
+ *           at home.
  * 
- *          --> Adding new stylesheet css.
+ *       --> Changing versioning to two digits. 
  * 
- * Note: Pending to decide if these classes will be
- * become in styled component.
+ * Note: Changes may be made in this stylesheet and more
+ * styles will be added.
  */
 const DccbGlobalStyles = createGlobalStyle`
 .dark-theme{
@@ -104,6 +104,42 @@ Variables
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
+
+  /**extra added colors for layout building -- start */
+  --color-primario:#730039;
+  --color-primario-light:hsla(330,100%,23%,0.85);
+  --color-primario-dark:hsla(330,100%,23%,0.85);
+
+  --color-secondario:#ffc513;
+  --color-secondario-light:hsla(45,100%,54%,0.55);
+  --color-secondario-dark:rgba(255,196,19,0.85);
+
+  --color-tertiario:#ff724c;
+  --color-tertiario-light:hsla(39,100%,65%,0.55);
+  --color-tertiario-dark:rgba(255,115,76,0.85);
+
+  --color-quarternario:#f6eedf;
+  --color-quarternario-light:hsla(39,56%,92%,0.6);
+  --color-quarternario-dark:hsla(39,56%,92%,0.85);
+
+  --color-black-light:#000;
+
+  /* Transition duration **/
+
+  --transition-duration: 0.3s;
+
+  /*section title font size**/
+  --font-size-title: calc( 2rem + 2vw);
+
+  /*section Padding**/
+  --padding-section: 8vh 3vw;
+
+  /**section - font-size*/
+  --links-font-size:calc(0.5rem + 1vw);
+  --paragraph-font-size:calc(.6rem + 0.637vw);
+  --header-font-size:calc(1rem + 0.637vw);
+
+  /**extra added colors and props for layout building -- end */
   
   --clr-black: #222;
   --transition: all 0.3s linear;
@@ -131,148 +167,76 @@ body {
   font-family: 'Architects Daughter', cursive;
   background: var(--clr-white);
   color: var(--clr-grey-1);
-  line-height: 1.5;
-  font-size: 0.875rem;
+  line-height: 1.7;
+  font-size: 62.5%;
+  background-color: var(--color-quarternario);
 }
-ul {
-  list-style-type: none;
+
+.container{
+  display: grid;
+    
+  grid-template-columns: [container-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content,11rem) [col-end]) [center-end] 1fr [container-end];
+
 }
-a {
+
+a:link,
+a:visited{
+  color: var(--color-black-light);
   text-decoration: none;
-}
-hr {
-  border: none;
-  border-top: 1px solid var(--clr-grey-8);
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-}
-h1 {
-  font-size: 2.5rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.5rem;
-}
-h4 {
-  font-size: 1.25rem;
-}
-h5 {
-  font-size: 0.875rem;
-}
-p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-3);
-}
-@media screen and (min-width: 800px) {
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  h4 {
-    font-size: 1.5rem;
-  }
-  h5 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
-}
-/*  global classes */
-
-/* section */
-.section {
-  padding: 5rem 0;
-}
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: var(--max-width);
+  font-size: var(--links-font-size);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  position: relative;
+  transition: all var(--transition-duration) cubic-bezier(1,0,0,1);
+  z-index: 1;
 }
 
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
-}
-.text-center {
-  text-align: center;
-}
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
+p{
+  font-size: var(--paragraph-font-size);
 }
 
-.loading {
-  width: 6rem;
-  height: 6rem;
-  margin: 0 auto;
-  margin-top: 10rem;
-  border-radius: 50%;
-  border: 4px solid #ccc;
-  border-top-color: var(--clr-primary-5);
-  animation: spinner 0.6s linear infinite;
+h2{
+  font-size: var(--header-font-size);
 }
 
-.btn {
-  text-transform: uppercase;
-  background: var(--clr-primary-14);
-  color: var(--clr-primary-10);
-  padding: 0.375rem 0.75rem;
-  letter-spacing: var(--spacing);
-  display: inline-block;
-  font-weight: 400;
-  transition: var(--transition);
-  font-size: 0.875rem;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
-  border-color: transparent;
-}
-.btn:hover {
-  color: var(--clr-primary-1);
-  background: var(--clr-primary-16);
-}
-.title {
-  text-align: center;
-}
-.title .underline {
-  width: 6rem;
-  height: 0.25rem;
-  background: #49a6e9;
-  background: var(--clr-primary-13);
-  margin-left: auto;
-  margin-right: auto;
-}
-.page-100 {
-  min-height: calc(100vh - 10rem);
-  padding: 5rem 0;
-}
-.page {
-  min-height: calc(100vh - (20vh + 10rem));
+li{
+  list-style: none;
+  margin-bottom: 4rem;
 }
 
+section#nav-section{
+  grid-column: container-start / container-end;
+}
+
+.header_main-nav{
+  position: fixed;
+  z-index: 2;
+}
+
+section#prisma-section{
+  margin-top: 4rem;
+  grid-column: center-start / center-end;
+  height: 500px;
+}
+
+section#img-container-section{
+  grid-column: col-start 8 / container-end;
+  height: 400px;
+}
+
+section#about-me-section{
+  grid-column: center-start / col-end 4;
+  height: 170px;
+}
+
+section#services-component-section{
+  grid-column: center-start / col-end 7;
+  height: 400px;
+}
+
+section#footer-section{
+  grid-column: container-start / container-end;
+  font-size: var(--links-font-size);
+}
 `
 export default DccbGlobalStyles;
