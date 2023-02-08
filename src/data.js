@@ -8,22 +8,38 @@ import { image1,
          image8, 
          image9,
          image10 } from './assets/houses-images/index'
+
+import { archicad, arqrosespic, autocad, awards } from './assets/index.assets'
+
 /**
- * DCCB - Portfolio version 6 - data js - Features: 
+ * DCCB - Portfolio version 7.02 - data js - Features: 
  * 
- *          --> Adding to 'links' data the 
- *             'design services' link prop.
+ *          --> Adding to 'brands' data
  * 
- *          --> Adding 'image' and 'price'
- *              props to 'projects test data' 
- * 
- * Note: 'projects' test data is a sample data, pending
- * shape a complete data.
- * 
- * By the momment the for 'projects' data i'll handle
- * local images until i get done the definitive data
- * shape
+ * Note: pending to clean this file 
  */
+
+export const arqpictures = [
+    {
+      id:1,
+      image:arqrosespic  
+    },
+    {
+      id:2,
+      image:awards
+    },
+]
+
+export const brands = [
+    {
+      id:1,
+      image:autocad  
+    },
+    {
+      id:2,
+      image:archicad
+    },
+]
 
 export const links = [
     {
