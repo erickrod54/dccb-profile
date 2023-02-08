@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 //Sidebar toogle
 import { CgMenuGridR } from 'react-icons/cg'
 import NavBarButtons from "./navbar-buttons.component";
+import { useState } from "react";
+import { useEffect } from "react";
+
 
 /**DCCB - Portfolio version 7.02 - NavBar Component- 
  * Features: 
@@ -19,8 +22,24 @@ import NavBarButtons from "./navbar-buttons.component";
  */
 
 const NavBar = () => {
+  
+  const { links, openSidebar } = useAppContext()
+  
+  const [background, setBackground] = useState('nav-links');
 
-    const { links, openSidebar } = useAppContext()
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > 0) {
+        setBackground('nav-links nav-links--scroll-down');
+      } else {
+        setBackground('nav-links');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+   
 
     return(
       <section id='nav-section'>
@@ -35,7 +54,7 @@ const NavBar = () => {
                         <CgMenuGridR onClick={openSidebar}/>      
                     </button>
                 </div>
-                <ul className='nav-links'>
+                <ul className={background}>
                     {links.map((link) => {
                         const { id, text, url } = link;
 
@@ -87,6 +106,16 @@ const NavContainer = styled.nav`
   .nav-links {
     display: none;
   }
+
+  .nav-links--scroll-down {
+      background-color: var(--raisin-black);
+      border-radius: 1rem;
+      border: 2px solid tomato;
+      a{
+        color: var(--blanched-almond);
+      }
+  }
+
   .cart-btn-wrapper {
     display: none;
   }
