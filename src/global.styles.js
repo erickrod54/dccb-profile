@@ -1,15 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 7.02 - 'global.styles' js 
+/**DCCB - Portfolio version 7.03 - 'global.styles' js 
  * file - Features: 
  * 
- *       --> Building Layout grid for the
- *           at home.
- * 
- *       --> Changing versioning to two digits. 
+ *       --> Adding 'section#resumes-buttons' and 
+ *           'section#awards-section'. 
  * 
  * Note: Changes may be made in this stylesheet and more
  * styles will be added.
+ * 
+ *
  */
 const DccbGlobalStyles = createGlobalStyle`
 .dark-theme{
@@ -233,6 +233,17 @@ section#services-component-section{
   grid-column: center-start / col-end 7;
   height: 400px;
 }
+
+section#resumes-buttons{
+  grid-column: center-start / col-end 7;
+  height: 100px;
+}
+
+section#awards-section{
+  grid-column: center-start / col-end 7;
+  height: 400px;
+}
+
 
 section#footer-section{
   grid-column: container-start / container-end;
