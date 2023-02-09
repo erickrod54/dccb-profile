@@ -1,12 +1,12 @@
 import React, { useContext, useState, useEffect, useReducer } from "react";
 import reducer from '../reducers/dccb_profile_reducers';
-import { arqpictures, brands, links } from '../data'
+import { arqpictures, brands, links, publicAwards } from '../data'
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../utils/actions";
 
-/**DCCB - Portfolio version 7.02 - 'dccb_profile_context' file - 
+/**DCCB - Portfolio version 7.03 - 'dccb_profile_context' file - 
  * Features: 
  * 
- *          --> Importing and providing 'brands'
+ *          --> Importing and providing 'publicAwards'
  * 
  * Note: pending to modify context name
  * */
@@ -59,7 +59,8 @@ export const AppProvider = ({ children }) => {
                 openSidebar,
                 closeSidebar,
                 arqpictures,
-                brands
+                brands,
+                publicAwards
                 }}>
             {children}
         </AppContext.Provider>
