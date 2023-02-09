@@ -12,12 +12,23 @@ import { image1,
 import { archicad, arqrosespic, autocad, awards } from './assets/index.assets'
 
 /**
- * DCCB - Portfolio version 7.02 - data js - Features: 
+ * DCCB - Portfolio version 7.03 - data js - Features: 
  * 
- *          --> Adding to 'brands' data
+ *          --> Adding to 'publicAwards' data
  * 
  * Note: pending to clean this file 
  */
+
+export const publicAwards = [
+    {
+        id:1,
+        award:'Recognition by the Municipal Chamber of the Mayor\'s Office of the San Cristobal municipality for outstanding performance as a professional, awarded by the President of the Municipal Chamber, Mr. Gustavo Delgado.'
+    },
+    {
+        id:2,
+        award:'Recognition by the Municipal Chamber of the Mayor\'s Office of the San Cristobal municipality for outstanding performance as a distinguished professional, presented by council member Alexis Vivas.'
+    }
+]
 
 export const arqpictures = [
     {
