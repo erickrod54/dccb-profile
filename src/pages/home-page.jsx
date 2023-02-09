@@ -1,12 +1,11 @@
 import React from "react";
-import { Footer, NavBar, Prisma, ServicesComponent } from '../components/index.components';
+import { Awards, Footer, NavBar, Prisma, Resumes, ServicesComponent } from '../components/index.components';
 import AboutMe from "./about.me-page";
 
-/** DCCB - Portfolio version 7.01 - Home Page - Features: 
+/** DCCB - Portfolio version 7.03 - Home Page - Features: 
  * 
- *          --> Importing Components from their indexes.
- *      
- *          --> Changing versioning to two digits.
+ *          --> Importing and palcing 'Resumes' section
+ *              and 'Awards'.  
  *     
  * Note: This re arrange is made in order to change the layout from
  * 'flexbox' to 'grid'
@@ -19,7 +18,9 @@ const  HomePage = () => {
             <NavBar />
             <Prisma />
             <AboutMe />                      
-            <ServicesComponent /> 
+            <ServicesComponent />
+            <Resumes />
+            <Awards /> 
             <Footer />
         </section>
        
