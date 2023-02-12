@@ -3,15 +3,16 @@ import { BrowserRouter as Router,
          Routes, 
          Route } from 'react-router-dom';
 
-import { HomePage, AboutMe, Projects, SingleProjectPage, DesignServices, Error } from './pages/index.pages';
+import { HomePage, AboutMe, Projects, SingleProjectPage, DesignServices, Error, DccbSharedLayoutPage } from './pages/index.pages';
 
-/** DCCB - Portfolio version 7.01 - Features: 
+/** DCCB - Portfolio version 7.04 - Features: 
  * 
- *          --> Importing components from their
- *              indexes.
+ *      --> Importing 'DccbSharedLayoutPage' 
+ *          and wrapping the routes with it.
  * 
- * Note: Re arranging components in 'HomePage'
- * to change layout. 
+ * Note: This is made in order the get the 
+ * 'Navbar' and 'Footer' present over the
+ * navigation. 
  */
 
 function App() {
@@ -19,12 +20,14 @@ function App() {
   
       <Router>
         <Routes>
-            <Route path='/' element={<HomePage />}/> 
-            <Route path='/about-me' element={<AboutMe />}/>
-            <Route path='/projects' element={<Projects />}/>
-            <Route path='/projects/:id' element={<SingleProjectPage />}/>
-            <Route path='/design-services' element={<DesignServices />}/>
-            <Route path='*' element={<Error />}/>
+            <Route path='/' element={<DccbSharedLayoutPage />}>
+              <Route index path='/home' element={<HomePage />}/> 
+              <Route path='/about-me' element={<AboutMe />}/>
+              <Route path='/projects' element={<Projects />}/>
+              <Route path='/projects/:id' element={<SingleProjectPage />}/>
+              <Route path='/design-services' element={<DesignServices />}/>
+              <Route path='*' element={<Error />}/>
+            </Route>
         </Routes>
       </Router>
     
