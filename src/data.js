@@ -12,11 +12,13 @@ import { image1,
 import { archicad, arqrosespic, autocad, awards } from './assets/index.assets'
 
 /**
- * DCCB - Portfolio version 7.03 - data js - Features: 
+ * DCCB - Portfolio version 7.04 - data js - Features: 
  * 
- *          --> Adding to 'publicAwards' data
+ *          --> Modifying the route 'home' from
+ *              '/' to '/home'
  * 
- * Note: pending to clean this file 
+ * Note: this is made in order to have access to 
+ * 'DccbSharedLayoutPage' 
  */
 
 export const publicAwards = [
@@ -55,7 +57,7 @@ export const brands = [
 export const links = [
     {
         id: 1,
-        url:'/',
+        url:'/home',
         text:'home'
     },
     {
