@@ -1,10 +1,11 @@
 import React from "react";
-import { useState } from "react";
 import styled from "styled-components";
+import { useAppContext } from "../context/dccb_profile_context";
 
-/** DCCB - Portfolio version 7.04 - Resumes - Features: 
+/** DCCB - Portfolio version 7.05 - Resumes - Features: 
  * 
- *      --> Building 'Resumes' Component.
+ *      --> Destructuring 'showresumes' ,and  'handleShowresumes'
+ *          from the context.
  * 
  * Note: this component contain information about the
  * awards
@@ -12,11 +13,7 @@ import styled from "styled-components";
 
 const Resumes = () => {
 
-    const [ showresumes, setShowresumes ] = useState(false);
-
-    const handleShowresumes = () => {
-        setShowresumes(!showresumes)
-    }
+    const { showresumes, handleShowresumes } = useAppContext()
 
     return(
         <section id='resumes-buttons'>
