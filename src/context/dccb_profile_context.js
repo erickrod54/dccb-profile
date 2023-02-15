@@ -3,10 +3,10 @@ import reducer from '../reducers/dccb_profile_reducers';
 import { arqpictures, brands, links, publicAwards } from '../data'
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../utils/actions";
 
-/**DCCB - Portfolio version 7.03 - 'dccb_profile_context' file - 
+/**DCCB - Portfolio version 7.05 - 'dccb_profile_context' file - 
  * Features: 
  * 
- *          --> Importing and providing 'publicAwards'
+ *          --> Placing states and handlers for the Resume Component
  * 
  * Note: pending to modify context name
  * */
@@ -17,10 +17,14 @@ const initialState = {
     isSidebarOpen: true,
 }
 
+
 export const AppContext = React.createContext()
 
 export const AppProvider = ({ children }) => {
     const [ state, dispatch ] = useReducer( reducer, initialState);
+    
+    /**states for the resumes */
+    const [ showresumes, setShowresumes ] = useState(false);
 
     const openSidebar = () => {
         dispatch({ type: SIDEBAR_OPEN})
@@ -48,6 +52,11 @@ export const AppProvider = ({ children }) => {
             setTheme('dark-theme')
         }
     }
+    
+     /**handlers for the 'handleShowresumes' */
+    const handleShowresumes = () => {
+        setShowresumes(!showresumes)
+    }
 
     return(
         <AppContext.Provider 
@@ -55,12 +64,14 @@ export const AppProvider = ({ children }) => {
                 ...state, 
                 links,
                 theme,
+                showresumes,
                 toggleTheme,
                 openSidebar,
                 closeSidebar,
                 arqpictures,
                 brands,
-                publicAwards
+                publicAwards,
+                handleShowresumes
                 }}>
             {children}
         </AppContext.Provider>
