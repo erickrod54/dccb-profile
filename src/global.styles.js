@@ -1,10 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 7.03 - 'global.styles' js 
+/**DCCB - Portfolio version 7.06 - 'global.styles' js 
  * file - Features: 
  * 
- *       --> Adding 'section#resumes-buttons' and 
- *           'section#awards-section'. 
+ *       --> Adding 'section#social-media-section'. 
  * 
  * Note: Changes may be made in this stylesheet and more
  * styles will be added.
@@ -244,6 +243,10 @@ section#awards-section{
   height: 400px;
 }
 
+section#social-media-section{
+  grid-column: col-start 4 / col-start 7;
+  height: 400px;
+}
 
 section#footer-section{
   grid-column: container-start / container-end;
