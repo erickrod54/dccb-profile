@@ -10,16 +10,40 @@ import { image1,
          image10 } from './assets/houses-images/index'
 
 import { archicad, arqrosespic, autocad, awards } from './assets/index.assets'
+import { faInstagram, faDribbble, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /**
- * DCCB - Portfolio version 7.04 - data js - Features: 
+ * DCCB - Portfolio version 7.06 - data js - Features: 
  * 
- *          --> Modifying the route 'home' from
- *              '/' to '/home'
+ *          --> Bulding 'SocialIcons' data
+ * 
+ *          --> Importing and placing Brands Icons.
  * 
  * Note: this is made in order to have access to 
  * 'DccbSharedLayoutPage' 
  */
+
+ export const instagram = <FontAwesomeIcon icon={faInstagram} />
+ export const linkedin = <FontAwesomeIcon icon={faLinkedin} />
+ export const dribble = <FontAwesomeIcon icon={faDribbble} />
+
+ export const SocialIcons = [
+   {
+        id:1,
+        icon:instagram,
+        url:'#'
+    },
+    {
+        id:2,
+        icon:linkedin,
+        url:'#'
+    },{
+        id:3,
+        icon:dribble,
+        url:'#'
+    }
+]
 
 export const publicAwards = [
     {
