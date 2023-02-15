@@ -1,12 +1,13 @@
 import React, { useContext, useState, useEffect, useReducer } from "react";
 import reducer from '../reducers/dccb_profile_reducers';
-import { arqpictures, brands, links, publicAwards } from '../data'
+import { arqpictures, brands, links, publicAwards, SocialIcons } from '../data'
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../utils/actions";
 
-/**DCCB - Portfolio version 7.05 - 'dccb_profile_context' file - 
+/**DCCB - Portfolio version 7.06 - 'dccb_profile_context' file - 
  * Features: 
  * 
- *          --> Placing states and handlers for the Resume Component
+ *          --> Importing and Providing 'SocialIcons'
+ *              data.
  * 
  * Note: pending to modify context name
  * */
@@ -71,7 +72,8 @@ export const AppProvider = ({ children }) => {
                 arqpictures,
                 brands,
                 publicAwards,
-                handleShowresumes
+                handleShowresumes,
+                SocialIcons
                 }}>
             {children}
         </AppContext.Provider>
