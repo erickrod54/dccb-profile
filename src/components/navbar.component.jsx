@@ -11,11 +11,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 
-/**DCCB - Portfolio version 7.02 - NavBar Component- 
+/**DCCB - Portfolio version 7.07 - NavBar Component- 
  * Features: 
  * 
- *      --> Clearing local styles to get some global
- *          styles.
+ *      --> Testing styles in 'nav-links' posible 
+ *        large changes must implemented later.
  * 
  * Note: fter this version i will use the 'id' for the 
  * new layout.
@@ -47,7 +47,7 @@ const NavBar = () => {
           <nav className="header_main-nav">
             <div className='nav-center'>
                 <div className='nav-header'>
-                    <Link to='/'>
+                    <Link to='/home'>
                         <img src={logo} alt='dccb temporal logo'/>
                     </Link>
                     <button typeof='button' className='nav-toggle'>
@@ -75,10 +75,7 @@ const NavBar = () => {
 }
 
 const NavContainer = styled.nav`
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 
   .nav-center {
     width: 90vw;
@@ -105,6 +102,9 @@ const NavContainer = styled.nav`
   }
   .nav-links {
     display: none;
+    padding: 1rem;
+    font-size: calc(0.5rem + 0.5vw);
+    align-items: center;
   }
 
   .nav-links--scroll-down {
