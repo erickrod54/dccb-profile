@@ -1,9 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 7.06 - 'global.styles' js 
+/**DCCB - Portfolio version 7.07 - 'global.styles' js 
  * file - Features: 
  * 
- *       --> Adding 'section#social-media-section'. 
+ *       --> Building some styles for 'content' and testing 
+ *           media queries. 
  * 
  * Note: Changes may be made in this stylesheet and more
  * styles will be added.
@@ -148,6 +149,9 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
+  
+  /*section title font size**/
+  --font-size-title: calc( 2rem + 2vw);
 }
 /*
 =============== 
@@ -251,6 +255,32 @@ section#social-media-section{
 section#footer-section{
   grid-column: container-start / container-end;
   font-size: var(--links-font-size);
+}
+
+
+.content{
+    font-size: calc(1rem + 2vw);
+    font-weight: 500;
+    padding: 2vh 2rem 6vh var(--font-size-title);
+  }
+
+  .img-container{
+    padding: 2vh 0.5rem;
+  }
+
+@media screen and (max-width:1000px){
+    /*all hte links**/
+    a:link,
+    a:visited{
+      font-size: calc(1rem + 1vw);
+    }
+}
+
+@media screen and (max-width:600px){
+  /*all hte links**/
+  .content{
+    font-size: 2rem;
+  }
 }
 `
 export default DccbGlobalStyles;
