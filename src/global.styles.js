@@ -1,10 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 7.07 - 'global.styles' js 
+/**DCCB - Portfolio version 7.08 - 'global.styles' js 
  * file - Features: 
  * 
- *       --> Building some styles for 'content' and testing 
- *           media queries. 
+ *       --> Adding 'brand' colors to 'root'. 
  * 
  * Note: Changes may be made in this stylesheet and more
  * styles will be added.
@@ -123,6 +122,12 @@ Variables
   --color-quarternario-dark:hsla(39,56%,92%,0.85);
 
   --color-black-light:#000;
+
+  /**brands-colors */
+  --instagram-brand-bkg: linear-gradient(to bottom, #E4405F, #F3786C, #FFAF7C, #FFD6A3, #FFFFFF);
+  --linkdn-brand-bkg:#0072b1;
+  --dribbble-brand-bkg: #ea4c89;
+
 
   /* Transition duration **/
 
