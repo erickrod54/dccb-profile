@@ -14,11 +14,9 @@ import { faInstagram, faDribbble, faLinkedin } from '@fortawesome/free-brands-sv
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /**
- * DCCB - Portfolio version 7.06 - data js - Features: 
+ * DCCB - Portfolio version 7.08 - data js - Features: 
  * 
- *          --> Bulding 'SocialIcons' data
- * 
- *          --> Importing and placing Brands Icons.
+ *          --> Adding a field 'name' for 'SocialIcons'.
  * 
  * Note: this is made in order to have access to 
  * 'DccbSharedLayoutPage' 
@@ -31,15 +29,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
  export const SocialIcons = [
    {
         id:1,
+        name:'instagram',
         icon:instagram,
         url:'#'
     },
     {
         id:2,
+        name:'linkedin',
         icon:linkedin,
         url:'#'
     },{
         id:3,
+        name:'dribble',
         icon:dribble,
         url:'#'
     }
