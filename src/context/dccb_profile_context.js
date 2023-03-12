@@ -3,11 +3,11 @@ import reducer from '../reducers/dccb_profile_reducers';
 import { arqpictures, brands, links, publicAwards, SocialIcons } from '../data'
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../utils/actions";
 
-/**DCCB - Portfolio version 7.06 - 'dccb_profile_context' file - 
+/**DCCB - Portfolio version 7.09 - 'dccb_profile_context' file - 
  * Features: 
  * 
- *          --> Importing and Providing 'SocialIcons'
- *              data.
+ *          --> Providing 'setShowresumes' to set useEffect on
+ *              resumes.component.
  * 
  * Note: pending to modify context name
  * */
@@ -73,7 +73,8 @@ export const AppProvider = ({ children }) => {
                 brands,
                 publicAwards,
                 handleShowresumes,
-                SocialIcons
+                SocialIcons,
+                setShowresumes
                 }}>
             {children}
         </AppContext.Provider>
