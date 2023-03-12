@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context/dccb_profile_context";
 
-/** DCCB - Portfolio version 7.05 - Resumes - Features: 
+/** DCCB - Portfolio version 7.09 - Resumes - Features: 
  * 
- *      --> Destructuring 'showresumes' ,and  'handleShowresumes'
- *          from the context.
+ *      --> Implementing 'useEffect' to set the state
+ *          of 'showresumes' when component mounting.
  * 
  * Note: this component contain information about the
  * awards
@@ -13,7 +13,11 @@ import { useAppContext } from "../context/dccb_profile_context";
 
 const Resumes = () => {
 
-    const { showresumes, handleShowresumes } = useAppContext()
+    const { showresumes, handleShowresumes, setShowresumes } = useAppContext()
+
+    useEffect(() => {
+        setShowresumes(true)
+    },[setShowresumes])
 
     return(
         <section id='resumes-buttons'>
