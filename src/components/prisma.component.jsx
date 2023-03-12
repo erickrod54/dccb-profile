@@ -2,23 +2,25 @@ import React from "react";
 import styled from "styled-components";
 import { PrismaContent, PrismaImages } from './index.components'
 
-/** DCCB - Portfolio version 7.07 - Prisma Component- Features: 
+/** DCCB - Portfolio version 7.09 - Prisma Component- Features: 
  * 
- *      --> Implemenmting Prisma in two separate components.
+ *      --> Implemenmting Style Component as Parent.
  * 
- * Note: fter this version i will use the 'id' for the 
- * new layout.
+ *      --> Applying style naming convention.
+ * 
+ * Note: the style naming convention has been applied to 
+ *'prisma-section--center'.
  */
 
 const Prisma = () => {
 
     return(
-      <section id='prisma-section'>
-        <Wrapper className='section-center'>
+      <Wrapper id='prisma-section'>
+        <div className="prisma-section--center">
           <PrismaContent />
           <PrismaImages />
-        </Wrapper>
-      </section>
+        </div>
+      </Wrapper>
       )
 
 }
