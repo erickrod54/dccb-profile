@@ -5,20 +5,24 @@ import styled from "styled-components";
 import { useAppContext } from '../context/dccb_profile_context';
 import { Link } from 'react-router-dom';
 //Sidebar toogle
-import { CgMenuGridR } from 'react-icons/cg'
+//import { CgMenuGridR } from 'react-icons/cg'
 import NavBarButtons from "./navbar-buttons.component";
 import { useState } from "react";
 import { useEffect } from "react";
 
 
-/**DCCB - Portfolio version 7.07 - NavBar Component- 
+/**DCCB - Portfolio version 7.10 - NavBar Component- 
  * Features: 
  * 
- *      --> Testing styles in 'nav-links' posible 
- *        large changes must implemented later.
+ *      --> Comenting out this Component 'CgMenuGridR'
+ *          is going to be use later.
  * 
- * Note: fter this version i will use the 'id' for the 
- * new layout.
+ * Note: the code for 'nav-toggle' is:
+ * 
+ *   <button typeof='button' className='nav-toggle'>
+ *   <CgMenuGridR onClick={openSidebar}/>      
+ *   </button>
+ * .
  */
 
 const NavBar = () => {
@@ -50,9 +54,6 @@ const NavBar = () => {
                     <Link to='/home'>
                         <img src={logo} alt='dccb temporal logo'/>
                     </Link>
-                    <button typeof='button' className='nav-toggle'>
-                        <CgMenuGridR onClick={openSidebar}/>      
-                    </button>
                 </div>
                 <ul className={background}>
                     {links.map((link) => {
