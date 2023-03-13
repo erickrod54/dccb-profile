@@ -1,12 +1,10 @@
 import React from "react";
 import { useAppContext } from "../context/dccb_profile_context";
 
-/**DCCB - Portfolio version 7.02 - 'ServicesComponent' 
+/**DCCB - Portfolio version 7.10 - 'ServicesComponent' 
  * Component- Features: 
  * 
- *     --> Destructuring 'brands' from the context
- * 
- *     --> Placing icons and changing the title.
+ *     --> Implementing style class naming.
  * 
  * Note: fter this version i will use the 'id' for the 
  * new layout.
@@ -21,8 +19,8 @@ const ServicesComponent = () => {
     const archicad = brands[1].image;
 
     return(
-        <section id='services-component-section'>
-            <h2>I Design in </h2>
+        <section id='services'>
+            <h2 className="services--title">I Design in </h2>
             <img src={autocad} alt='autocad'></img>
             <img src={archicad} alt='archicad'></img>
         </section>
