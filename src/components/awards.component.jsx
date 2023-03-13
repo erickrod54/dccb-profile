@@ -1,9 +1,9 @@
 import React from "react";
 import { useAppContext } from "../context/dccb_profile_context";
 
-/** DCCB - Portfolio version 7.04 - Awards - Features: 
+/** DCCB - Portfolio version 7.10 - Awards - Features: 
  * 
- *      --> Building 'Awards' Component.
+ *      --> Implementing style class naming.
  * 
  * Note: this component contain information about the
  * awards
@@ -17,14 +17,14 @@ const Awards = () => {
     const award2 = publicAwards[1].award;
 
     return(
-        <section id='awards-section'>
-            <h2>Public Awards</h2>
+        <section id='awards'>
+            <h2 className="awards--title">Public Awards</h2>
             <ul>
                 <li>
-                    <p>{award1}</p>
+                    <p className="awards--para">{award1}</p>
                 </li>
                 <li>
-                    <p>{award2}</p>    
+                    <p className="awards--para">{award2}</p>    
                 </li>
             </ul>
         </section>
