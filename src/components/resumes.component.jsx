@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context/dccb_profile_context";
 
-/** DCCB - Portfolio version 7.09 - Resumes - Features: 
+/** DCCB - Portfolio version 7.10 - Resumes - Features: 
  * 
- *      --> Implementing 'useEffect' to set the state
- *          of 'showresumes' when component mounting.
+ *      --> Implementing style class naming.
  * 
  * Note: this component contain information about the
  * awards
@@ -20,17 +19,18 @@ const Resumes = () => {
     },[setShowresumes])
 
     return(
-        <section id='resumes-buttons'>
+        <section id='resumes'>
             <Wrapper>
-                <button className='resume-button' onClick={handleShowresumes}>
+                <button className='resumes--button' onClick={handleShowresumes}>
                     Download my resumes
                 </button>
 
                 {!showresumes ?
-                <>
+                <div className="resumes--links">
                     <a href='https://drive.google.com/file/d/1GIhfqOMCDBTnccd_0isj4Zwzs1PQls2n/view?usp=share_link' target="_blank" rel="noreferrer">my resume ( english )</a>
                     <a href='https://drive.google.com/file/d/1l73BuuT4TmyMLv0Lg94aoHkuApMGF2kB/view?usp=share_link' target="_blank" rel="noreferrer">my resume ( spanish )</a>
-                </>
+                </div>    
+                
                 :
                 null
                 }
@@ -40,7 +40,7 @@ const Resumes = () => {
 }
 
 const Wrapper = styled.div`
-    .resume-button {
+    .resumes--button {
         background: #9B0000;
         background: linear-gradient(to right, #9B0000, #FF5733);
         border: none;
