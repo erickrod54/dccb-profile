@@ -5,10 +5,9 @@ import { BrowserRouter as Router,
 
 import { HomePage, AboutMe, Projects, SingleProjectPage, DesignServices, Error, DccbSharedLayoutPage } from './pages/index.pages';
 
-/** DCCB - Portfolio version 7.04 - Features: 
+/** DCCB - Portfolio version 7.10 - Features: 
  * 
- *      --> Importing 'DccbSharedLayoutPage' 
- *          and wrapping the routes with it.
+ *      --> Changing '/home' to '/'.
  * 
  * Note: This is made in order the get the 
  * 'Navbar' and 'Footer' present over the
@@ -21,7 +20,7 @@ function App() {
       <Router>
         <Routes>
             <Route path='/' element={<DccbSharedLayoutPage />}>
-              <Route index path='/home' element={<HomePage />}/> 
+              <Route index path='/' element={<HomePage />}/> 
               <Route path='/about-me' element={<AboutMe />}/>
               <Route path='/projects' element={<Projects />}/>
               <Route path='/projects/:id' element={<SingleProjectPage />}/>
