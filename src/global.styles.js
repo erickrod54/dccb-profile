@@ -1,9 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 7.08 - 'global.styles' js 
+/**DCCB - Portfolio version 7.10 - 'global.styles' js 
  * file - Features: 
  * 
- *       --> Adding 'brand' colors to 'root'. 
+ *       --> Building styles for 
+ *          'prisma-section'. 
  * 
  * Note: Changes may be made in this stylesheet and more
  * styles will be added.
@@ -221,35 +222,104 @@ section#nav-section{
   z-index: 2;
 }
 
+/** section#prisma-section global styles - start  */
 section#prisma-section{
   margin-top: 4rem;
   grid-column: center-start / center-end;
-  height: 500px;
+  
+  
 }
+
+.prisma-section--center{
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 4vh;
+  align-items: center;
+}
+
+section#intro > h2[class*=title]{
+  grid-area: title;
+  font-size: var(--font-size-title);
+  font-weight: 400;
+ 
+}
+
+section#intro > h2[class*=title],
+section#about-me > h2[class*=title],
+section#services > h2[class*=title],
+section#awards > h2[class*=title]{
+  color: #c74bb4;
+}
+
+section#intro,
+section#about-me{
+  padding: var(--padding-section);
+  display: grid;
+
+  grid-template-areas:
+   'title'
+   'para';
+   grid-row-gap: 4vh;
+   align-items: center;
+}
+
+section#about-me{
+  grid-row-gap: 1vh;
+}
+
+section#intro > p[class*=para],
+section#about-me > p[class*=para],
+section#awards > ul li p[class*=para]{
+  grid-area: para;
+  color: black;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+/** section#prisma-section global styles - end  */
 
 section#img-container-section{
   grid-column: col-start 8 / container-end;
-  height: 400px;
 }
 
-section#about-me-section{
+section#about-me{
   grid-column: center-start / col-end 4;
-  height: 170px;
 }
 
-section#services-component-section{
-  grid-column: center-start / col-end 7;
-  height: 400px;
+section#about-me > p[class*=para]{
+  font-size: 1rem;
 }
 
-section#resumes-buttons{
-  grid-column: center-start / col-end 7;
-  height: 100px;
+section#services{
+  grid-column: center-start / col-end 7;  
+  margin-left: 3rem;
 }
 
-section#awards-section{
+section#resumes{
   grid-column: center-start / col-end 7;
-  height: 400px;
+  margin-top: 1rem;
+  padding: 1rem;
+  padding-left: 5rem;
+}
+
+.resumes--links{
+  margin-top: 2rem;
+  display: grid;
+}
+
+section#awards{
+  grid-column: center-start / col-end 7;
+
+  padding: 3rem;
+}
+
+section#awards > h2[class*=title]{
+  font-size: 1.5rem;
+}
+
+section#awards > ul li p[class*=para]{
+  line-height: 2;
+  font-size: 1rem;
 }
 
 section#social-media-section{
@@ -263,7 +333,7 @@ section#footer-section{
 }
 
 
-.content{
+.intro{
     font-size: calc(1rem + 2vw);
     font-weight: 500;
     padding: 2vh 2rem 6vh var(--font-size-title);
@@ -281,11 +351,53 @@ section#footer-section{
     }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width: 800px){
+  .prisma-section--center{
+    grid-column-gap: 1rem;
+  }
+
+  section#about-me{
+    padding: 6rem;
+  }
+
+  section#services{
+    padding: 1rem;
+    grid-column: center-start / center-end;
+  }
+
+  section#services > h2[class*=title]{
+    margin-left: 8rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width:700px){
   /*all hte links**/
   .content{
     font-size: 2rem;
   }
+
+  section#img-container-section{
+    display: none;
+  }
+
+  section#intro > p[class*=para]{
+    padding: 2rem;
+    font-size: 1rem;
+  }
+
+  section#intro > h2[class*=title]{
+    margin-left: 2rem;
+  }
+
+  section#about-me{
+    padding-top: 0.25rem;
+  }
+
+  section#about-me > p[class*=para]{
+    font-size: 1.2rem;
+  }
 }
+
 `
 export default DccbGlobalStyles;
