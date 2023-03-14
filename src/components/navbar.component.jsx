@@ -51,7 +51,7 @@ const NavBar = () => {
           <nav className="header_main-nav">
             <div className='nav-center'>
                 <div className='nav-header'>
-                    <Link to='/home'>
+                    <Link to='/'>
                         <img src={logo} alt='dccb temporal logo'/>
                     </Link>
                 </div>
