@@ -1,11 +1,12 @@
 import React from "react";
 import { useAppContext } from "../context/dccb_profile_context";
-import { Link } from 'react-router-dom'
 import styled from "styled-components";
 
-/** DCCB - Portfolio version 7.08 - Features: 
+/** DCCB - Portfolio version 7.10 - Features: 
  * 
  *      --> Building 'IconsWrapper' style Component.
+ * 
+ *      --> Changingn 'Link' Component for 'a' anchor tag
  * 
  * Note: This index is built in order to rearrange 
  * the components
@@ -20,24 +21,38 @@ const SocialMedia = () => {
 
     return(
         <section id='social-media-section'>
-            <div className='social-media-section--icons'>
-                <IconsWrapper>
+            <IconsWrapper className='social-media-section--icons'>
+                <div className="social-media-section--icons">
                     {SocialIcons.map((icons) => {
-                        const { id, icon, name } = icons;
+                        const { id, icon, name, url } = icons;
 
                         return(
-                            <Link to='#' key={id} className={`social-media-section--icons--${name}`}>
+                            <a href={url} key={id} className={`social-media-section--icons--${name}`}>
                                 {icon}
-                            </Link>
+                            </a>
                         )
                     })}
-                </IconsWrapper>
-            </div>
+                </div>
+               
+                
+            </IconsWrapper>
         </section>
     )
 }
 
 const IconsWrapper = styled.div`
+
+    .social-media-section--icons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-right: 4rem;
+    }
+
+    .social-media-section--icons:link,
+    .social-media-section--icons:visited{
+        box-shadow: 0.5rem 0.5rem 2rem 0.5rem yellow, -0.5rem -0.5rem 2rem 0.5rem green;
+        transform: scale(0.8);
+    }
 
     svg{
         font-size: calc(4rem + 0.666667vw);
