@@ -14,9 +14,11 @@ import { faInstagram, faDribbble, faLinkedin } from '@fortawesome/free-brands-sv
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /**
- * DCCB - Portfolio version 7.08 - data js - Features: 
+ * DCCB - Portfolio version 7.10 - data js - Features: 
  * 
- *          --> Adding a field 'name' for 'SocialIcons'.
+ *          --> Adding linkdn url to 'SocialIcons'.
+ * 
+ *          --> Commenting 'links' to start. 
  * 
  * Note: this is made in order to have access to 
  * 'DccbSharedLayoutPage' 
@@ -37,7 +39,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
         id:2,
         name:'linkedin',
         icon:linkedin,
-        url:'#'
+        url:'https://www.linkedin.com/in/dilcia-cardenas/'
     },{
         id:3,
         name:'dribble',
@@ -82,10 +84,10 @@ export const brands = [
 export const links = [
     {
         id: 1,
-        url:'/home',
+        url:'/',
         text:'home'
     },
-    {
+    /**{
         id: 2,
         url:'/projects',
         text:'projects'
@@ -99,7 +101,7 @@ export const links = [
         id: 4,
         url:'/about-me',
         text:'about me'
-    },
+    }, */
 ]
 
 /**test data for projects */
