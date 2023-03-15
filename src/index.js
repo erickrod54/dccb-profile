@@ -5,28 +5,27 @@ import DccbGlobalStyles from "./global.styles";
 import App from './App';
 import { AppProvider } from '../src/context/dccb_profile_context'
 import { ProjectProvider } from '../src/context/projects_context'
+import { Helmet } from 'react-helmet';
 
-/**DCCB - Portfolio version 6 - 'index' js file - 
+/**DCCB - Portfolio version 7.10 - 'index' js file - 
  * Features: 
  * 
- *          --> Wrapping with the 'AppProvider' the
- *              whole application.
+ *          --> Importing 'Helmet' to set a 'title'
+ *              to dccb portfolio, nad meta tag.
  * 
- *          --> Importing and placing 'ProjectProvider'
- *              to provide all concerns about projects.
+ *          --> Changing versioning to two digits.
  * 
- * Note: Version 6 start implementing context, and reducer to 
- * handle much better the actions implementation.
- * 
- * By this point i can start to provide values from
- * the dccb_profile_context > AppProvider to any Component
- * that i need it
- * 
- * for this version i'm going to provide a test value as
- * 'data' on 'Home' Component
+ * Note: Implementing Helmet to set some initial SEO.
  */
 
 ReactDOM.render(
+  <>
+  <Helmet>
+    <meta charSet="utf-8" />
+      <title>DCCB - ARQ Portfolio</title>
+      <link rel="canonical" href="https://dccb57.netlify.app" />
+    <meta name="description" content="DCCB Portfolio with my job background information and current work and projects on arquitecture design also Project Management | AutoCAD Drafter | Strategic Planning | Urban Planning | Urban Design | Sustainable Design | Commercial Design | Residential Design | Product Development | Project Planning"></meta>
+  </Helmet>
   <React.StrictMode>
     <DccbGlobalStyles />
     
@@ -35,7 +34,8 @@ ReactDOM.render(
         <App />
       </ProjectProvider>
     </AppProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
+  </>,
   document.getElementById('root')
 );
 
