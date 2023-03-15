@@ -1,8 +1,8 @@
 import React from "react";
 /**
- * DCCB - Portfolio version 7.02 - About Page - Features: 
+ * DCCB - Portfolio version 7.10 - About Page - Features: 
  * 
- *      --> Writting some small description about me 
+ *      --> Applying style naming convention. 
  * 
  * Note: fter this version i will use the 'id' for the 
  * new layout.
@@ -10,9 +10,9 @@ import React from "react";
 const AboutMe = () => {
 
     return(
-        <section id='about-me-section'>
-            <h2>About me Page</h2>
-            <p>
+        <section id='about-me'>
+            <h2 className="about-me-intro--title">About me</h2>
+            <p className="about-me-intro--para">
                 A little bit about me i love cats and dogs,
                 and nature
             </p>
