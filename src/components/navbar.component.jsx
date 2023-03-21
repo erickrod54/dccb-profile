@@ -11,11 +11,10 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 
-/**DCCB - Portfolio version 7.10 - NavBar Component- 
+/**DCCB - Portfolio version 7.11 - NavBar Component- 
  * Features: 
  * 
- *      --> Comenting out this Component 'CgMenuGridR'
- *          is going to be use later.
+ *      --> Taking out OpenSidebar to get in production.
  * 
  * Note: the code for 'nav-toggle' is:
  * 
@@ -27,7 +26,7 @@ import { useEffect } from "react";
 
 const NavBar = () => {
   
-  const { links, openSidebar } = useAppContext()
+  const { links } = useAppContext()
   
   const [background, setBackground] = useState('nav-links');
 
