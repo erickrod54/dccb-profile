@@ -1,10 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 7.10 - 'global.styles' js 
+/**DCCB - Portfolio version 7.11 - 'global.styles' js 
  * file - Features: 
  * 
- *       --> Building styles for 
- *          'prisma-section'. 
+ *       --> Adding '.intro--important-color' style 
+ *           class. 
+ * 
+ *       --> Adding 'intro--important' style class.
+ * 
+ *       --> Adding Media queries for better 
+ *           responsiveness.
  * 
  * Note: Changes may be made in this stylesheet and more
  * styles will be added.
@@ -248,8 +253,16 @@ section#intro > h2[class*=title]{
 section#intro > h2[class*=title],
 section#about-me > h2[class*=title],
 section#services > h2[class*=title],
-section#awards > h2[class*=title]{
+section#awards > h2[class*=title],
+.intro--important-color{
   color: #c74bb4;
+}
+
+.intro--important-color{
+  font-size: calc(1rem + 1vw);
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 section#intro,
@@ -343,6 +356,11 @@ section#footer-section{
     padding: 2vh 0.5rem;
   }
 
+.intro--important{
+    color: #9B0000;
+    font-size: calc(0.60rem + 1vw);
+}
+
 @media screen and (max-width:1000px){
     /*all hte links**/
     a:link,
@@ -356,8 +374,9 @@ section#footer-section{
     grid-column-gap: 1rem;
   }
 
-  section#about-me{
-    padding: 6rem;
+  section#about-me,
+  .intro--important{
+    padding: 3rem;
   }
 
   section#services{
@@ -368,6 +387,10 @@ section#footer-section{
   section#services > h2[class*=title]{
     margin-left: 8rem;
     font-size: 1.5rem;
+  }
+
+  section#img-container-section{
+    display: none;
   }
 }
 
@@ -381,8 +404,10 @@ section#footer-section{
     display: none;
   }
 
-  section#intro > p[class*=para]{
-    padding: 2rem;
+  section#intro > p[class*=para],
+  .intro--important{
+    margin: 3rem;
+    padding: 3rem;
     font-size: 1rem;
   }
 
