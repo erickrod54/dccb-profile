@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 7.12 - 'global.styles' js 
+/**DCCB - Portfolio version 7.13 - 'global.styles' js 
  * file - Features: 
  * 
- *       --> Changing 'section#about-me' place in 
- *           the Layout.
+ *       --> Adding 'margin' and 'padding' to 
+ *           the 'container' for better responsiveness
  * 
  * Note: Changes may be made in this stylesheet and more
  * styles will be added.
@@ -182,6 +182,8 @@ body {
 }
 
 .container{
+  margin: 1rem;
+  padding: 1rem;
   display: grid;
     
   grid-template-columns: [container-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content,11rem) [col-end]) [center-end] 1fr [container-end];
