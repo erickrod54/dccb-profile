@@ -1,10 +1,10 @@
 import React from "react";
 import { useAppContext } from "../context/dccb_profile_context";
 
-/**DCCB - Portfolio version 7.10 - 'ServicesComponent' 
+/**DCCB - Portfolio version 7.11 - 'ServicesComponent' 
  * Component- Features: 
  * 
- *     --> Implementing style class naming.
+ *     --> Commenting 'Archicad' service by the moment.
  * 
  * Note: fter this version i will use the 'id' for the 
  * new layout.
@@ -16,13 +16,13 @@ const ServicesComponent = () => {
     console.log('brands ==>', brands)   
     
     const autocad = brands[0].image;
-    const archicad = brands[1].image;
+    /**const archicad = brands[1].image; */
 
     return(
         <section id='services'>
             <h2 className="services--title">I Design in </h2>
             <img src={autocad} alt='autocad'></img>
-            <img src={archicad} alt='archicad'></img>
+            {/**<img src={archicad} alt='archicad'></img> */}
         </section>
     )
 }
