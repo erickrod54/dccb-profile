@@ -1,15 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 7.11 - 'global.styles' js 
+/**DCCB - Portfolio version 7.12 - 'global.styles' js 
  * file - Features: 
  * 
- *       --> Adding '.intro--important-color' style 
- *           class. 
- * 
- *       --> Adding 'intro--important' style class.
- * 
- *       --> Adding Media queries for better 
- *           responsiveness.
+ *       --> Changing 'section#about-me' place in 
+ *           the Layout.
  * 
  * Note: Changes may be made in this stylesheet and more
  * styles will be added.
@@ -296,7 +291,7 @@ section#img-container-section{
 }
 
 section#about-me{
-  grid-column: center-start / col-end 4;
+  grid-column: col-start 4 / col-end 6;
 }
 
 section#about-me > p[class*=para]{
