@@ -11,10 +11,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 
-/**DCCB - Portfolio version 7.11 - NavBar Component- 
+/**DCCB - Portfolio version 7.14 - NavBar Component- 
  * Features: 
  * 
- *      --> Taking out OpenSidebar to get in production.
+ *      --> Building 'handleHomeLinkClick' to make 
+ *          the bevahior 'take to the top of the 
+ *          screen'.
  * 
  * Note: the code for 'nav-toggle' is:
  * 
@@ -42,6 +44,13 @@ const NavBar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  function handleHomeLinkClick() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
    
 
     return(
@@ -50,7 +59,7 @@ const NavBar = () => {
           <nav className="header_main-nav">
             <div className='nav-center'>
                 <div className='nav-header'>
-                    <Link to='/'>
+                    <Link to='/'  onClick={handleHomeLinkClick}>
                         <img src={logo} alt='dccb temporal logo'/>
                     </Link>
                 </div>
@@ -60,7 +69,7 @@ const NavBar = () => {
 
                         return(
                             <li key={id}>
-                                <Link to={url}>{text}</Link>
+                                <Link to={url} onClick={url === '/' ? handleHomeLinkClick : null}>{text}</Link>  
                             </li>
                         )
                     })}
