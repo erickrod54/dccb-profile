@@ -1,10 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
-/**DCCB - Portfolio version 7.13 - 'global.styles' js 
+/**DCCB - Portfolio version 7.14 - 'global.styles' js 
  * file - Features: 
  * 
- *       --> Adding 'margin' and 'padding' to 
- *           the 'container' for better responsiveness
+ *       --> Adding 'section#aboutme' queries and more 
+ *           responsiveness at 800px.
+ * 
+ *       --> Taking off some white space at 800px querie.
+ * 
+ *       --> Modifiying styles that target p 'into--para'
+ *          and adding the jsx elements to the line.
  * 
  * Note: Changes may be made in this stylesheet and more
  * styles will be added.
@@ -358,11 +363,27 @@ section#footer-section{
     font-size: calc(0.60rem + 1vw);
 }
 
+@media screen and (max-width:2000px){
+
+    .container{
+       margin: 0.2rem;
+       padding: 0.2rem;
+    }
+
+    section#about-me{
+      grid-column: col-start 2 / col-end 4;
+    }
+}
+
 @media screen and (max-width:1000px){
     /*all hte links**/
     a:link,
     a:visited{
       font-size: calc(1rem + 1vw);
+    }
+
+    section#about-me{
+      grid-column: col-start 2 / col-end 4;
     }
 }
 
@@ -389,6 +410,10 @@ section#footer-section{
   section#img-container-section{
     display: none;
   }
+
+  section#about-me{
+      grid-column: col-start 4 / col-end 6;
+    }
 }
 
 @media screen and (max-width:700px){
@@ -400,12 +425,13 @@ section#footer-section{
   section#img-container-section{
     display: none;
   }
+  
 
-  section#intro > p[class*=para],
+  section#intro div ul li > p[class*=para],
   .intro--important{
-    margin: 3rem;
-    padding: 3rem;
-    font-size: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
   }
 
   section#intro > h2[class*=title]{
