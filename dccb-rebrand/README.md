@@ -1,4 +1,13 @@
-# React + Vite
+# Old React CRA app replaced with a Brand new Vite + React + JavasCript tooling
+
+This is made in order to rebrand dccb to offer Arquitectural and CAD technical services online, steps
+made to this point:
+
+- Migration of the old React CRA project to a legacy repo by directories.
+- Installing React + JavaScript using Vite tooling.
+- The server shows private to the PI, so next step is to make it public to my network.
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
