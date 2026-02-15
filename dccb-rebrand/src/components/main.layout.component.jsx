@@ -1,6 +1,6 @@
-/** DCCB - Portfolio version 1.00 - MainLayout - Features: 
+/** DCCB-rebrand - Portfolio version 1.00 - MainLayout - Features: 
  * 
- *      --> Building MainLayout component
+ *      --> Building MainLayout component 
  * 
  * Note: This component will be the foundation for the
  * new layout for dccb re brand.
