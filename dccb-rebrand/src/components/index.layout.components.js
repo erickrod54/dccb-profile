@@ -1,9 +1,9 @@
-import MainLayout from "./main.layout.component.jsx";
+import MainLayout from "./layout/main.layout.component.jsx";
 
-/** DCCB-rebrand - Portfolio version 1.00 - layout.index 
+/** DCCB-rebrand - Portfolio version 1.01 - layout.index 
  * - Features: 
  * 
- *      --> Building layout index.
+ *      --> Changing MainLayout path.
  * 
  * Note: This is the index of the main layout. 
  */
