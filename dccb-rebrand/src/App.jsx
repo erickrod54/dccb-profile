@@ -1,9 +1,9 @@
 import './App.css'
-import { MainLayout } from './components/index.layout.components'
+import { MainLayout } from './components/layout/index.layout.components'
 
-/** DCCB-rebrand - Portfolio version 1.00 - Features: 
+/** DCCB-rebrand - Portfolio version 1.02 - Features: 
  * 
- *      --> Importing MainLayout from layout index.
+ *      --> Changing layout index path.
  * 
  * Note: This is the first component in the re brand
  */
