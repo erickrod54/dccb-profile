@@ -1,17 +1,22 @@
 import './App.css'
 import { MainLayout } from './components/layout/index.layout.components'
+import TailwindTest from './components/tailwind.test.component'
 
-/** DCCB-rebrand - Portfolio version 1.02 - Features: 
+/** DCCB-rebrand - Portfolio version 1.03 - Features: 
  * 
- *      --> Changing layout index path.
+ *      --> Adding 'TailwindTest'.
  * 
- * Note: This is the first component in the re brand
+ * Note: 'TailwindTest' is a component to test 
+ * tailwind 
  */
 
 function App() {
 
   return (
+    <>
       <MainLayout />
+      <TailwindTest />
+    </>
   )
 }
 
