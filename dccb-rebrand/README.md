@@ -7,6 +7,15 @@ made to this point:
 - Installing React + JavaScript using Vite tooling.
 - The server shows private to the PI, so next step is to make it public to my network.
 
+## Firsts steps before starting components developing
+
+- Installing tailwind css and vite plugin by - npm install tailwindcss @tailwindcss/vite
+
+```bash
+# This install tailwind + tailwind vite plugin
+npm install tailwindcss @tailwindcss/vite
+```
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
