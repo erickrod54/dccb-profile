@@ -27,6 +27,9 @@ npm install @vitejs/plugin-basic-ssl
 npm run dev
 ```
 
+> [!WARNING]
+> Since we are using a self-signed certificate, your browser will show a security warning. Click "Advanced" to proceed.
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
