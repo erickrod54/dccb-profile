@@ -19,6 +19,14 @@ npm install tailwindcss @tailwindcss/vite
 > **Note:** after tailwind command, add @tailwind tag to index.css and also tailwindcss() plugin
 > vite config.
 
+- Installing SSL plugin
+
+```bash
+# This is a comment inside the code block
+npm install @vitejs/plugin-basic-ssl
+npm run dev
+```
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
