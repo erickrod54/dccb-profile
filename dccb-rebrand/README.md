@@ -16,6 +16,9 @@ made to this point:
 npm install tailwindcss @tailwindcss/vite
 ```
 
+> **Note:** after tailwind command, add @tailwind tag to index.css and also tailwindcss() plugin
+> vite config.
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
