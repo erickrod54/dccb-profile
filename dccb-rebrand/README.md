@@ -27,6 +27,8 @@ npm install @vitejs/plugin-basic-ssl
 npm run dev
 ```
 
+- Installing Wouter plugin
+
 > [!WARNING]
 > Since we are using a self-signed certificate, your browser will show a security warning. Click "Advanced" to proceed.
 
