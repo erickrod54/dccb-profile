@@ -1,27 +1,24 @@
+import path from "path" 
+import { fileURLToPath } from "url"
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import basicSsl from '@vitejs/plugin-basic-ssl';
+import basicSsl from '@vitejs/plugin-basic-ssl'
 
-/** DCCB-rebrand - Portfolio version 1.04 - vite.config - 
- * Features: 
- * 
- *      --> Setting and enabling 'basicSsl'.
- * 
- * Note: 'basicSsl' is for https protocol self signed certificate
- */
+// Define __dirname manualmente para ESM
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-    basicSsl()//this generates the temporary self signed certificate
-  ],
+  plugins: [react(), tailwindcss(), basicSsl()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"), // Configura el alias @
+    },
+  },
   server: {
-    host: true,    // This exposes the server to your local network
-    port: 5173,
-    strictPort: true,
-    https:true //Enables TLS/SSL protocol
+    host: '0.0.0.0',
+    port: 3000,
+    https: true
   }
 })
