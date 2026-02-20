@@ -27,10 +27,13 @@ npm install @vitejs/plugin-basic-ssl
 npm run dev
 ```
 
-- Installing Wouter plugin
+so far the inital installation before component development is:
 
-> [!WARNING]
-> Since we are using a self-signed certificate, your browser will show a security warning. Click "Advanced" to proceed.
+# 🚀 DCCB Rebrand - Portfolio v1.02
+
+This project is a high-performance React application built with **Vite**, designed for scalability using **shadcn/ui**.
+
+---
 
 ## React + Vite
 
