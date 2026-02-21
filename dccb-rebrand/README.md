@@ -54,6 +54,14 @@ When running `npx shadcn@latest init`, the modern CLI detects your environment a
 **Security:** @vitejs/plugin-basic-ssl (Required for modern browser APIs)
 **Network:** Tailscale Mesh VPN
 
+
+### Why install `@types/node`?
+In modern ESM environments, Node.js does not globally recognize variables like `__dirname`. We install these types manually to:
+1.  **Configure Path Aliases (`@/`):** Allow Vite to map `@` to the `/src` directory.
+2.  **Fix Editor Warnings:** Resolve "not defined" errors in `vite.config.js` when using the `path` module.
+
+---
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
