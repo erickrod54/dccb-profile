@@ -62,6 +62,11 @@ In modern ESM environments, Node.js does not globally recognize variables like `
 
 ---
 
+## 📥 Step-by-Step Installation
+
+### 1. Preparation & Typing
+Install the base dependencies and Node definitions so your configuration files work without errors.
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
