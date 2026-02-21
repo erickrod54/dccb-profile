@@ -35,6 +35,14 @@ This project is a high-performance React application built with **Vite**, design
 
 ---
 
+## 🛠 Core Tech Stack
+
+**Framework:** React + Vite (JS)
+**Styling:** Tailwind CSS v4 + shadcn/ui
+**Routing:** Wouter (Ultra-lightweight 2kb)
+**Security:** @vitejs/plugin-basic-ssl (Required for modern browser APIs)
+**Network:** Tailscale Mesh VPN
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
