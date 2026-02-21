@@ -35,6 +35,17 @@ This project is a high-performance React application built with **Vite**, design
 
 ---
 
+
+## 🏗 shadcn/ui Architecture (v4 Optimized)
+
+Unlike traditional component libraries, shadcn is not a closed package. Components are downloaded as source code directly into your `src/components/ui` folder, giving you 100% control.
+
+## Automatic Dependency Management
+When running `npx shadcn@latest init`, the modern CLI detects your environment and automatically configures:
+**`class-variance-authority` (cva):** For managing component variants (e.g., button sizes/colors).
+**`tailwind-merge` & `clsx`:** For intelligent class name merging.
+**`src/lib/utils.js`:** Automatically creates the `cn()` utility function used by these libraries.
+
 ## 🛠 Core Tech Stack
 
 **Framework:** React + Vite (JS)
