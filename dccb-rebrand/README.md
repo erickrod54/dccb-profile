@@ -79,6 +79,13 @@ npm install -D @types/node
 ### 2. shadcn/ui Initialization
 This command sets up the `components.json` file and the style utilities (`cn`, `cva`, `twMerge`) in one go.
 
+```bash
+# Already completed: Configures styles, CSS variables, and class utilities.
+npx shadcn@latest init
+```
+
+---
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
