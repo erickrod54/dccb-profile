@@ -73,6 +73,9 @@ npm install
 npm install -D @types/node
 ```
 
+> [!IMPORTANT]
+> Ensure your `vite.config.js` defines `__dirname` manually (using `fileURLToPath`) so that shadcn aliases work correctly in ESM modules.
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
