@@ -96,6 +96,9 @@ Starts the server in HTTPS mode and exposes it to your private network.
 npm run dev
 ```
 
+> [!TIP]
+> **Network Checklist:** Access the app via `https://[YOUR-TAILSCALE-IP]:3000`. Since it uses a self-signed certificate, accept the security warning in your browser ("Advanced" -> "Proceed").
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
