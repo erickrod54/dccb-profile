@@ -131,6 +131,9 @@ import { cn } from "@/lib/utils"
 
 ---
 
+## 🛣 Lightweight Routing (Wouter)
+We use **Wouter** to keep resource consumption minimal—perfect for Raspberry Pi hardware.
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
