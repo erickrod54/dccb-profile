@@ -112,6 +112,13 @@ kill -9 <PID>
 
 ---
 
+## 🎨 Component Management
+
+### Add New UI Elements
+```bash
+npx shadcn@latest add button card input
+```
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
