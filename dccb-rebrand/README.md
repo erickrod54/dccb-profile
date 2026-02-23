@@ -119,6 +119,18 @@ kill -9 <PID>
 npx shadcn@latest add button card input
 ```
 
+### Using the `cn()` Utility
+Use this function (auto-generated in `src/lib/utils.js`) to combine base classes with conditional classes or CVA variants without specificity conflicts.
+
+```jsx
+import { cn } from "@/lib/utils"
+
+// Usage Example
+<div className={cn("text-sm font-medium", isSelected && "text-blue-500")} />
+```
+
+---
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
