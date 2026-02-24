@@ -3,6 +3,7 @@
     "@vitejs/plugin-basic-ssl": "^2.1.4"
   },
   "dependencies": {
+    "lucide-react": "^0.575.0",
     "wouter": "^3.9.0"
   }
 }
