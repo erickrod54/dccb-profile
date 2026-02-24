@@ -1,11 +1,12 @@
 import MainLayout from "./main.layout.component.jsx";
+import ThemeSwitcher from "./theme.switcher.component.jsx";
 
-/** DCCB-rebrand - Portfolio version 1.02 - layout.index 
+/** DCCB-rebrand - Portfolio version 1.05 - layout.index 
  * - Features: 
  * 
- *      --> Changing MainLayout path.
+ *      --> Adding 'ThemeSwitcher' to index.
  * 
  * Note: This is the index of the main layout. 
  */
 
-export { MainLayout }
+export { MainLayout, ThemeSwitcher }
