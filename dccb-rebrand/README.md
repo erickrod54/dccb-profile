@@ -143,6 +143,10 @@ import { Route, Switch } from "wouter";
 </Switch>
 ```
 
+> [!TIP]
+> Using `<Switch>` ensures that only one route match is rendered at a time, preventing unexpected UI overlaps.
+>
+
 ## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
