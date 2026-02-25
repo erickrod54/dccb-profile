@@ -1,11 +1,11 @@
 // src/components/layout/main.layout.component.jsx
 import React from "react";
 import { cva } from "class-variance-authority";
-import ThemeSwitcher from "./theme.switcher.component"; 
+import { ThemeSwitcher } from "./index.layout.components"; 
 
-/** DCCB-rebrand - Portfolio version 1.05 - Features: 
+/** DCCB-rebrand - Portfolio version 1.06 - Features: 
  * 
- *      --> Building 'MainLayout'.
+ *      --> Changing ThemeSwitcher import path.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
