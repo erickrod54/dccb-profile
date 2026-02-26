@@ -1,9 +1,9 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-/** DCCB-rebrand - Portfolio version 1.05 - Features: 
+/** DCCB-rebrand - Portfolio version 1.08 - Features: 
  * 
- *      --> Building Hero section Title.
+ *      --> Building Hero section Technical description.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -25,6 +25,12 @@ const Hero = () => {
                 Precision Drafting & <br /> <span className='text-brand-blue dark:text-cyan-400'>Urban Planning</span>
             </h1>
 
+            {/**Technical Description */}
+            <p className='mt-8 max-w-2xl font-mono text-sm leading-relaxed text-slate-600 dark:text-slate-400'>
+                Especializada en soporte arquitectonico, dibujo tecnico detallado y planificacion urbana. Transformando conceptos 
+                complejos en planos ejecutables con precision milimetrica.
+            </p>
+            
         </section>
     )
 }
