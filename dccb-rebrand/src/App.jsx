@@ -1,10 +1,10 @@
 import './App.css'
 import { MainLayout } from './components/layout/index.layout.components'
-import Hero from './components/sections/hero.section.component'
+import Hero from './components/sections/index.sections'
 
-/** DCCB-rebrand - Portfolio version 1.06 - Features: 
+/** DCCB-rebrand - Portfolio version 1.07 - Features: 
  * 
- *      --> Adding Hero Component to MainLayout.
+ *      --> Changing Hero import path.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
