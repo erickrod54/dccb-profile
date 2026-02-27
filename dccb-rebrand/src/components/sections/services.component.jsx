@@ -2,9 +2,9 @@ import React from "react";
 import { Ruler, Map, Layers, ClipboardCheck, Zap, Icon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 
-/** DCCB-rebrand - Portfolio version 1.13 - Features: 
+/** DCCB-rebrand - Portfolio version 1.14 - Features: 
  * 
- *      --> Adding second service.
+ *      --> Adding third service.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -23,6 +23,13 @@ const services = [
         des: 'Analisis del sitio, esquemas de zonificacion y planificacion de desarrollo urbano sostenible',
         icon: <Map className="w-5 h-5" />,
         code: 'SEC_02',
+        featured: false
+    },
+    {
+        title: 'BIM_SUPPORT',
+        desc: 'Modelado de informacion de construccion y coordinacion de disciplinas en 3D',
+        icon: <Layers className="w-5 h-5" />,
+        code: 'SEC_03',
         featured: false
     }
 ]
