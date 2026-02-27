@@ -1,9 +1,9 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-/** DCCB-rebrand - Portfolio version 1.08 - Features: 
+/** DCCB-rebrand - Portfolio version 1.09 - Features: 
  * 
- *      --> Building Hero section Technical description.
+ *      --> Building first tecnical button.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -30,7 +30,14 @@ const Hero = () => {
                 Especializada en soporte arquitectonico, dibujo tecnico detallado y planificacion urbana. Transformando conceptos 
                 complejos en planos ejecutables con precision milimetrica.
             </p>
-            
+
+            {/** CTAs / Botones tecnicos */}
+            <div className='mt-10 flex flex-wrap gap-4'>
+                <button className='group relative overflow-hidden rounded-sm bg-slate-900 px-6 py-3 font-mono text-sm font-bold text-white transition-all hover:bg-brand-blue dark:bg-white dark:text-slate-900 dark:hover:bg-cyan-400'>
+                    VIEW_PROJECTS
+                    <span className='ml-2 inline-block transition-transform group-hover:translate-x-1'>➡️</span>
+                </button>
+            </div>
         </section>
     )
 }
