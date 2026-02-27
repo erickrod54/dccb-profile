@@ -1,9 +1,9 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-/** DCCB-rebrand - Portfolio version 1.09 - Features: 
+/** DCCB-rebrand - Portfolio version 1.10 - Features: 
  * 
- *      --> Building first tecnical button.
+ *      --> Building second tecnical button.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -36,6 +36,9 @@ const Hero = () => {
                 <button className='group relative overflow-hidden rounded-sm bg-slate-900 px-6 py-3 font-mono text-sm font-bold text-white transition-all hover:bg-brand-blue dark:bg-white dark:text-slate-900 dark:hover:bg-cyan-400'>
                     VIEW_PROJECTS
                     <span className='ml-2 inline-block transition-transform group-hover:translate-x-1'>➡️</span>
+                </button>
+                <button className='rounded-sm border border-slate-200 px-6 py-3 font-mono text-xs font-bold text-slate-600 transition-colors hover:bg-slate-50 dark:border-white/10 dark:text-slate-400 dark:hover:bg-white/5'>
+                    DOWNLOAD_CV.PDF
                 </button>
             </div>
         </section>
