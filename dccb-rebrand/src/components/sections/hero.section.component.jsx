@@ -1,9 +1,9 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-/** DCCB-rebrand - Portfolio version 1.10 - Features: 
+/** DCCB-rebrand - Portfolio version 1.11 - Features: 
  * 
- *      --> Building second tecnical button.
+ *      --> Adding corner decor.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -41,6 +41,13 @@ const Hero = () => {
                     DOWNLOAD_CV.PDF
                 </button>
             </div>
+
+             {/* Coordenadas estéticas (Decoración de esquina) */}
+            <div className="absolute right-0 bottom-0 hidden font-mono text-[10px] opacity-20 md:block dark:text-white">
+                <p>LAT: 27.2730° N</p>
+                <p>LONG: 80.3582° W</p>
+            </div>
+
         </section>
     )
 }
