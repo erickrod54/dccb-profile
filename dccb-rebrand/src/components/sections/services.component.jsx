@@ -1,10 +1,11 @@
+
 import React from "react";
 import { Ruler, Map, Layers, ClipboardCheck, Zap, Icon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 
-/** DCCB-rebrand - Portfolio version 1.14 - Features: 
+/** DCCB-rebrand - Portfolio version 1.15 - Features: 
  * 
- *      --> Adding third service.
+ *      --> Adding fourth service.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -31,5 +32,12 @@ const services = [
         icon: <Layers className="w-5 h-5" />,
         code: 'SEC_03',
         featured: false
-    }
+    },
+    {
+        title: 'TECHNICAL_CONSULTING',
+        desc: 'Soporte especializado para firmas de arquitectura en la gestion de documentacion tecnica',
+        icon: <ClipboardCheck className="w-5 h-5" />,
+        code: 'SEC_04',
+        featured:false
+    },
 ]
