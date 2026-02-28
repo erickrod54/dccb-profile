@@ -3,9 +3,9 @@ import React from "react";
 import { Ruler, Map, Layers, ClipboardCheck, Zap, Icon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 
-/** DCCB-rebrand - Portfolio version 1.16 - Features: 
+/** DCCB-rebrand - Portfolio version 1.17 - Features: 
  * 
- *      --> Adding fifth service.
+ *      --> Building services component.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -48,3 +48,19 @@ const services = [
         featured:true
     }
 ]
+
+const Services = () => {
+
+    return (
+        <section className="py-20 border-t border-arch-gray/10 dark:border-white/5">
+            {/**Encabezado de seccion tipo tabla de dibujo */}
+            <div className="flex items-center gap-4 mb-12">
+                <h2 className="font-mono text-xl font-bold tracking-tighter uppercase dark:text-white">
+                    01 // SERVICES PROVIDED 
+                </h2>
+            </div>
+        </section>
+    )
+}
+
+export default Services;
