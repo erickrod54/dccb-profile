@@ -3,9 +3,9 @@ import React from "react";
 import { Ruler, Map, Layers, ClipboardCheck, Zap, Icon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 
-/** DCCB-rebrand - Portfolio version 1.17 - Features: 
+/** DCCB-rebrand - Portfolio version 1.19 - Features: 
  * 
- *      --> Building services component.
+ *      --> Adding services description.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -58,6 +58,7 @@ const Services = () => {
                 <h2 className="font-mono text-xl font-bold tracking-tighter uppercase dark:text-white">
                     01 // SERVICES PROVIDED 
                 </h2>
+                <div className="h-[1px] flex-1 bg-arch-gray/10 dark:bg-white/5"></div>
             </div>
         </section>
     )
