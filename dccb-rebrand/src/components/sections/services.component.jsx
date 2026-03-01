@@ -3,9 +3,9 @@ import React from "react";
 import { Ruler, Map, Layers, ClipboardCheck, Zap, Icon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 
-/** DCCB-rebrand - Portfolio version 1.19 - Features: 
+/** DCCB-rebrand - Portfolio version 1.20 - Features: 
  * 
- *      --> Adding services description.
+ *      --> Building services table.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -59,6 +59,19 @@ const Services = () => {
                     01 // SERVICES PROVIDED 
                 </h2>
                 <div className="h-[1px] flex-1 bg-arch-gray/10 dark:bg-white/5"></div>
+            </div>
+
+            {/**Grid ajustado 4 columnas en desktop */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-arch-gray/10 dark:bg-white/5 border border-arch-gray/10 dark:border-white/5">
+                {services.map((service, index) => (
+                    <div
+                        key={index}
+                        className={cn(
+                            "relative bg-white dark:bg-[#121212] p-8 group transition-all duration-500",
+                            
+                        )}
+                    ></div>
+                ))}
             </div>
         </section>
     )
