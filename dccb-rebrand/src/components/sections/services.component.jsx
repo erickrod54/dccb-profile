@@ -3,9 +3,9 @@ import React from "react";
 import { Ruler, Map, Layers, ClipboardCheck, Zap, Icon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 
-/** DCCB-rebrand - Portfolio version 2.01 - Features: 
+/** DCCB-rebrand - Portfolio version 2.02 - Features: 
  * 
- *      --> Adding badge to services table featured highlight.
+ *      --> Adding icons to service table.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -77,6 +77,13 @@ const Services = () => {
                                 NEW_TECH
                             </span>
                         )}
+
+                        <div className={cn(
+                            "mb-6 transition-transform duration-300 group-hover:scale-110", 
+                            service.featured ? "text-brand-blue dark:textcyan-400" : "text-slate-400 dark:text-slate-500"
+                        )}>
+                            {service.icon}
+                        </div>
                     </div>
                 ))}
             </div>
