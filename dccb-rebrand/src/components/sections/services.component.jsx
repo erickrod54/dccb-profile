@@ -3,9 +3,9 @@ import React from "react";
 import { Ruler, Map, Layers, ClipboardCheck, Zap, Icon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 
-/** DCCB-rebrand - Portfolio version 2.00 - Features: 
+/** DCCB-rebrand - Portfolio version 2.01 - Features: 
  * 
- *      --> Adding services table featured highlight.
+ *      --> Adding badge to services table featured highlight.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -68,9 +68,16 @@ const Services = () => {
                         key={index}
                         className={cn(
                             "relative bg-white dark:bg-[#121212] p-8 group transition-all duration-500",
-                            service.featured ? "lg:col-span-2 border-2 borrder-brand-ble/50 dark:border-cyan-400/50" : "hover:bg-slate-50 dark:hover:b-white/[0.02]"
+                            service.featured ? "lg:col-span-2 border-2 borrder-brand-ble/50 dark:border-cyan-400/50 bg-blue-50/30 dark:bg-cyan-950/10" : "hover:bg-slate-50 dark:hover:b-white/[0.02]"
                         )}
-                    ></div>
+                    >
+                        {/**Badge de New o AI solo para el destacado */}
+                        {service.featured && (
+                            <span className="absolute top-4 right-4 bg-brand-blue dark:bg-cyan-400 text-[9px] font-bold text-white dark:text-slate-900 px-2 py-1 rounded-sm tracking-widest animate-pulse">
+                                NEW_TECH
+                            </span>
+                        )}
+                    </div>
                 ))}
             </div>
         </section>
