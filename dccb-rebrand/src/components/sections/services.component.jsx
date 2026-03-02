@@ -3,9 +3,9 @@ import React from "react";
 import { Ruler, Map, Layers, ClipboardCheck, Zap, Icon } from 'lucide-react'
 import { cn } from "@/lib/utils";
 
-/** DCCB-rebrand - Portfolio version 2.03 - Features: 
+/** DCCB-rebrand - Portfolio version 2.04 - Features: 
  * 
- *      --> Adding ID to table services.
+ *      --> Adding title to table services.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -88,6 +88,13 @@ const Services = () => {
                         <span className="font-mono text-[10px] text-slate-400 block mb-2">
                             ID_{service.code}
                         </span>
+
+                        <h3 className={cn(
+                            "font-bold text-sm tracking-tight mb-3 uppercase",
+                            services.featured ? "text-brand-blue dark:text-cyan-400" : "dark:text-white"
+                        )}>
+                            {service.title}
+                        </h3>
                     </div>
                 ))}
             </div>
