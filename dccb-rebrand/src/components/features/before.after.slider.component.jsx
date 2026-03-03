@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-/** DCCB-rebrand - Portfolio version 2.09 - Features: 
+/** DCCB-rebrand - Portfolio version 2.10 - Features: 
  * 
- *      --> Adding 'Etiquetas Flotantes' second part.
+ *      --> Adding 'Slider'.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -44,6 +44,19 @@ const BeforeAfterSlider = ({ before, after, title }) => {
                 <span className='bg-cyan-400/80 text-slate-900 text-[10px] font-mono px-2 py-1 backdrop-blur-sm uppercase font-bold'>
                     {sliderPos < 90 ? "AI_VISUALIZATION" : ""}
                 </span>
+            </div>
+
+            {/**Linea del slider */}
+            <div
+                className='absolute top-0 bottom-0 w-1 bg-cyan-400 z-30 pointer-events-none'
+                style={{ left: `${sliderPos}%` }}
+            >
+                <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center shadow-lg'>
+                    <div className='flex gap-1'>
+                        <div className='w-1 h-3 bg-slate-900 rounded-full'></div>
+                        <div className='w-1 h-3 bg-slate-900 rounded-full'></div>
+                    </div>
+                </div>
             </div>
         </div>
     )
