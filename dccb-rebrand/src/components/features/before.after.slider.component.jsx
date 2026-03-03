@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-/** DCCB-rebrand - Portfolio version 2.08 - Features: 
+/** DCCB-rebrand - Portfolio version 2.09 - Features: 
  * 
- *      --> Adding 'Etiquetas Flotantes'.
+ *      --> Adding 'Etiquetas Flotantes' second part.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -38,6 +38,11 @@ const BeforeAfterSlider = ({ before, after, title }) => {
             <div className='absolute bottom-4 left-4 z-20 pointer-events-none'>
                 <span className='bg-slate-900/80 text-white text-[10px] font-mono px-2 py-1 backdrop-blur-sm uppercase'>
                     {sliderPos > 10 ? "CAD_DRAFT" : " " }
+                </span>
+            </div>
+            <div className='absolute bottom-4 right-4 z-20 pointer-events-none'>
+                <span className='bg-cyan-400/80 text-slate-900 text-[10px] font-mono px-2 py-1 backdrop-blur-sm uppercase font-bold'>
+                    {sliderPos < 90 ? "AI_VISUALIZATION" : ""}
                 </span>
             </div>
         </div>
