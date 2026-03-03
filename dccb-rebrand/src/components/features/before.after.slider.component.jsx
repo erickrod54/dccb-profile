@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-/** DCCB-rebrand - Portfolio version 2.07 - Features: 
+/** DCCB-rebrand - Portfolio version 2.08 - Features: 
  * 
- *      --> Building BeforeAfterSlider component.
+ *      --> Adding 'Etiquetas Flotantes'.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -32,6 +32,13 @@ const BeforeAfterSlider = ({ before, after, title }) => {
                 style={{clipPath:`inset(0 ${100 - sliderPos} % 0 0)` }}
             >
                 <img src={before} alt='Autocad Plan' className='w-full h-full object-cover grayscale opacity-80'/>
+            </div>
+
+            {/**Etiquetas Flotantes */}
+            <div className='absolute bottom-4 left-4 z-20 pointer-events-none'>
+                <span className='bg-slate-900/80 text-white text-[10px] font-mono px-2 py-1 backdrop-blur-sm uppercase'>
+                    {sliderPos > 10 ? "CAD_DRAFT" : " " }
+                </span>
             </div>
         </div>
     )
