@@ -2,9 +2,9 @@ import React from 'react';
 import BeforeAfterSlider from '../features/before.after.slider.component';
 import { projects } from '@/data/projects.data';
 
-/** DCCB-rebrand - Portfolio version 2.14 - Features: 
+/** DCCB-rebrand - Portfolio version 2.15 - Features: 
  * 
- *      --> Adding 'project' tag.
+ *      --> Adding 'project' description.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -45,6 +45,10 @@ const ProjectGallery = () => {
                                 ))}
                             </div>
                         </div>
+
+                        <p className='text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl'>
+                            {project.description}
+                        </p>
                     </div>
                 ))}
             </div>
