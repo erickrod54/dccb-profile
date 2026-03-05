@@ -1,10 +1,10 @@
 import './App.css'
 import { MainLayout } from './components/layout/index.layout.components'
-import { Hero, ProjectGallery, Services } from './components/sections/index.sections'
+import { Hero, ProjectGallery, Services, TechnicalAuthority } from './components/sections/index.sections'
 
-/** DCCB-rebrand - Portfolio version 2.07 - Features: 
+/** DCCB-rebrand - Portfolio version 2.16 - Features: 
  * 
- *      --> Adding ProjectGallery section.
+ *      --> Adding TechnicalAuthority section.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -18,6 +18,7 @@ function App() {
         <Hero />
         <Services />
         <ProjectGallery />
+        <TechnicalAuthority />
       </MainLayout>
     </>
   )
