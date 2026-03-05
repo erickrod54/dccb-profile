@@ -2,9 +2,9 @@ import React from 'react';
 import BeforeAfterSlider from '../features/before.after.slider.component';
 import { projects } from '@/data/projects.data';
 
-/** DCCB-rebrand - Portfolio version 2.13 - Features: 
+/** DCCB-rebrand - Portfolio version 2.14 - Features: 
  * 
- *      --> Adding 'project' location.
+ *      --> Adding 'project' tag.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -36,6 +36,13 @@ const ProjectGallery = () => {
                                     {project.title}
                                 </h3>
                                 <p className='text-xs text-slate-500 font-mono italic'>{ project.location}</p>
+                            </div>
+                            <div className='flex gap-2'>
+                                {project.tags.map(tag => (
+                                    <span key={tag} className='text-[9px] border border-arch-gray/20 px-2 py-0.5 rounded-full dark:text-slate-400 dark:border-white/10 uppercase font-mono'>
+                                        {tag}
+                                    </span>
+                                ))}
                             </div>
                         </div>
                     </div>
