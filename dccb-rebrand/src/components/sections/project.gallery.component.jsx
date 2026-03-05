@@ -2,9 +2,9 @@ import React from 'react';
 import BeforeAfterSlider from '../features/before.after.slider.component';
 import { projects } from '@/data/projects.data';
 
-/** DCCB-rebrand - Portfolio version 2.12 - Features: 
+/** DCCB-rebrand - Portfolio version 2.13 - Features: 
  * 
- *      --> Adding 'BeforeAfterSlider' to the Gallery.
+ *      --> Adding 'project' location.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -30,6 +30,14 @@ const ProjectGallery = () => {
                             after={project.imageAfter}
                             title={project.title}
                         />
+                        <div className='flex justify-between items-start'>
+                            <div>
+                                <h3 className='font-bold text-lg dark:text-white uppercase tracking-tight'>
+                                    {project.title}
+                                </h3>
+                                <p className='text-xs text-slate-500 font-mono italic'>{ project.location}</p>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
