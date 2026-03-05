@@ -1,11 +1,14 @@
+import horizonteCad from '../assets/horizonte-cad.png';
+import horizonteAI3d from '../assets/horizonte-ai.png'
+
 export const projects = [
   {
     id: "proj_01",
     title: "Residencial Horizonte",
     location: "Florida, US",
     description: "Optimización de distribución espacial y visualización fotorrealista de exteriores.",
-    imageBefore: "/dccb-rebrand/src/assets/horizonte-cad.png", // El plano de AutoCAD
-    imageAfter: "/dccb-rebrand/src/assets/horizonte-ai.png",   // El render de IA
+    imageBefore: horizonteCad, // El plano de AutoCAD
+    imageAfter: horizonteAI3d,   // El render de IA
     tags: ["AutoCAD", "AI Render", "Residential"]
   },
   // Agrega más proyectos aquí...
