@@ -1,9 +1,9 @@
 import React from 'react';
 import { ShieldCheck, HardHat, Ruler, Globe } from 'lucide-react';
 
-/** DCCB-rebrand - Portfolio version 2.20 - Features: 
+/** DCCB-rebrand - Portfolio version 3.00 - Features: 
  * 
- *      --> Adding TechnicalAuthority third left side.
+ *      --> Adding TechnicalAuthority first right side.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -36,6 +36,20 @@ const TechnicalAuthority = () => {
                         remoto de vanguardia. Mi enfoque combina la experiencia de campo con las 
                         herramientas digitales más avanzadas.
                     </p>
+                </div>
+
+                {/**Lado Derecho: Los pilares (no solo son servicios, es lo que ella sabe) */}
+                <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
+                    <div className='space-y-2'>
+                        <ShieldCheck className='w-5 h-5 text-brand-blue dark:text-cyan-400' />
+                        <h4 className='font-bold text-xs uppercase dark:text-white'>Normativa y Estándares</h4>
+                        <p className='text-[11px] text-slate-500 dark:text-slate-400'>Dominio de sistemas constructivos en concreto armado, mampostería y normativas urbanas.</p>
+                    </div>
+                    <div className='space-y-2'>
+                        <Globe className='w-5 h-5 text-brand-blue dark:text-cyan-400' />
+                        <h4 className='font-bold text-xs uppercase dark:text-white'>Alcance Internacional</h4>
+                        <p className='text-[11px] text-slate-500 dark:text-slate-400'>Dominio experto de estándares métricos y de EE. UU. (pies/pulgadas) para proyectos en toda la región.</p>
+                    </div>
                 </div>
             </div>
         </section>
