@@ -1,9 +1,9 @@
 import React from 'react';
 import { ShieldCheck, HardHat, Ruler, Globe } from 'lucide-react';
 
-/** DCCB-rebrand - Portfolio version 2.18 - Features: 
+/** DCCB-rebrand - Portfolio version 2.19 - Features: 
  * 
- *      --> Adding TechnicalAuthority first left side.
+ *      --> Adding TechnicalAuthority second left side.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -27,6 +27,10 @@ const TechnicalAuthority = () => {
                         <span className='font-mono text-4xl font-black text-brand-blue dark:text-cyan-400'>500+</span>
                         <p className='font-mono text-[10px] tracking-widest uppercase mt-1 dark:text-slate-400'>Proyectos Ejecutados</p>
                     </div>
+                    <h3 className='text-3xl font-bold dark:text-white leading-tight'>
+                        25 años de precision <br />
+                        <span className='text-slate-400'>en arquitectura técnica.</span>
+                    </h3>
                 </div>
             </div>
         </section>
