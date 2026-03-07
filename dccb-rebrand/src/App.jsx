@@ -1,10 +1,10 @@
 import './App.css'
 import { MainLayout } from './components/layout/index.layout.components'
-import { Hero, ProjectGallery, Services, TechnicalAuthority } from './components/sections/index.sections'
+import { AboutMeDCCB, Hero, ProjectGallery, Services, TechnicalAuthority } from './components/sections/index.sections'
 
-/** DCCB-rebrand - Portfolio version 2.16 - Features: 
+/** DCCB-rebrand - Portfolio version 3.03 - Features: 
  * 
- *      --> Adding TechnicalAuthority section.
+ *      --> Adding AboutMeDCCB section.
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -19,6 +19,7 @@ function App() {
         <Services />
         <ProjectGallery />
         <TechnicalAuthority />
+        <AboutMeDCCB />
       </MainLayout>
     </>
   )
