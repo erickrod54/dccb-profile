@@ -25,18 +25,41 @@
 
 /* Limpieza de estilos base de Vite que estorban */
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  :root {
+    /* Tipografía fluida: se ajusta según el tamaño de la pantalla */
+    font-size: 16px;
+  }
+
+  @media (min-width: 1920px) {
+    :root {
+      font-size: 19px;
+    }
+
+    /* Agranda todo en pantallas grandes */
+  }
+
+  @media (min-width: 2560px) {
+    :root {
+      font-size: 22px;
+    }
+
+    /* Pantallas 4K y TVs */
   }
 
   body {
-    margin: 0;
-    display: block;
-    /* Cambiado de flex a block */
-    min-height: 100vh;
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply antialiased text-slate-900 dark:text-slate-100 bg-white dark:bg-[#121212];
+    /* Evita que el contenido toque los bordes en móviles */
+    overflow-x: hidden;
   }
 }
+
+/* Contenedor Maestro para evitar que la web se "estire" infinito en TVs */
+.container-tech {
+  @apply mx-auto px-6 sm:px-12 lg:px-20;
+  max-width: 1800px;
+  /* Límite de confort visual */
+}
+
 
 :root {
   --radius: 0.625rem;
