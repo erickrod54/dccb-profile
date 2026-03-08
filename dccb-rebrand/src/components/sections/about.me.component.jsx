@@ -1,9 +1,9 @@
 import React from "react";
 import dccb_about_picture from '../../assets/dccb_about_me_foto.png'
 
-/** DCCB-rebrand - Portfolio version 3.05 - Features: 
+/** DCCB-rebrand - Portfolio version 3.06 - Features: 
  * 
- *    --> adding 'dccb_about_picture' picture mark and decor
+ *    --> adding 'dccb_about_picture' first left side
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -42,6 +42,17 @@ const AboutMeDCCB = () => {
                         <span className="font-mono text-[10px] text-brand-blue dark:text-cyan-400 font-bold">
                         7.7667° N, 72.2250° W // SC_VNZ
                         </span>
+                    </div>
+                </div>
+
+                {/**Lado Derecho: Narrativa ( 7 columnas con offset) */}
+                <div className="lg:col-span-6 lg:col-start-7 space-y-8">
+                    <div className="space-y-4">
+                        <h3 className="text-3xl font-bold dark:text-white leading-tight tracking-tight">
+                            De la gestión de obra al <br />
+                            <span className="text-brand-blue dark:text-cyan-400 italic font-serif">diseño del futuro</span>
+                        </h3>
+                        <div className="w-12 h-1 bg-brand-blue dark:bg-cyan-400"></div>
                     </div>
                 </div>
             </div>
