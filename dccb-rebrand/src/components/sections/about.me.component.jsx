@@ -1,9 +1,9 @@
 import React from "react";
 import dccb_about_picture from '../../assets/dccb_about_me_foto.png'
 
-/** DCCB-rebrand - Portfolio version 3.07 - Features: 
+/** DCCB-rebrand - Portfolio version 3.08 - Features: 
  * 
- *    --> adding 'dccb_about_picture' second left side
+ *    --> adding Technical firm
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -73,6 +73,12 @@ const AboutMeDCCB = () => {
                         Mi misión es simple: aportar mi experiencia senior para que sus proyectos alcancen la 
                         máxima claridad técnica y un impacto visual fotorrealista.
                         </p>
+                    </div>
+
+                    {/* Firma Técnica */}
+                    <div className="pt-6 border-t border-slate-100 dark:border-white/5">
+                        <span className="font-mono text-xs tracking-widest text-slate-400 uppercase">Principal Architect & Founder</span>
+                        <p className="font-serif text-2xl dark:text-white mt-1">DCCB</p>
                     </div>
                 </div>
             </div>
