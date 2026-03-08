@@ -1,9 +1,9 @@
 import React from "react";
 import dccb_about_picture from '../../assets/dccb_about_me_foto.png'
 
-/** DCCB-rebrand - Portfolio version 3.06 - Features: 
+/** DCCB-rebrand - Portfolio version 3.07 - Features: 
  * 
- *    --> adding 'dccb_about_picture' first left side
+ *    --> adding 'dccb_about_picture' second left side
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -53,6 +53,26 @@ const AboutMeDCCB = () => {
                             <span className="text-brand-blue dark:text-cyan-400 italic font-serif">diseño del futuro</span>
                         </h3>
                         <div className="w-12 h-1 bg-brand-blue dark:bg-cyan-400"></div>
+                    </div>
+
+                <div className="space-y-6 text-slate-600 dark:text-slate-400 font-sans leading-relaxed">
+                        <p>
+                        Con más de 25 años de trayectoria, mi carrera comenzó en <strong>San Cristóbal, Venezuela</strong>, 
+                        liderando firmas multidisciplinarias y coordinando la ejecución de más de 500 proyectos 
+                        urbanísticos y residenciales. Mi pasión siempre ha sido la precisión técnica: esa línea 
+                        perfecta que permite que una idea se convierta en una estructura sólida.
+                        </p>
+                        <p>
+                        Tras décadas de dirigir equipos de ingeniería y arquitectura, hoy evoluciono mi práctica 
+                        hacia el ecosistema digital global. Desde los Estados Unidos, fusiono la disciplina del 
+                        <strong> CAD tradicional</strong> con el potencial disruptivo de la <strong>Inteligencia Artificial</strong>, 
+                        ofreciendo a firmas internacionales un soporte técnico que no solo entiende el dibujo, 
+                        sino que comprende la lógica constructiva detrás de cada plano.
+                        </p>
+                        <p className="font-medium text-slate-800 dark:text-slate-200">
+                        Mi misión es simple: aportar mi experiencia senior para que sus proyectos alcancen la 
+                        máxima claridad técnica y un impacto visual fotorrealista.
+                        </p>
                     </div>
                 </div>
             </div>
