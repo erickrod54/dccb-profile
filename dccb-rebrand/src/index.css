@@ -26,30 +26,27 @@
 /* Limpieza de estilos base de Vite que estorban */
 @layer base {
   :root {
-    /* Tipografía fluida: se ajusta según el tamaño de la pantalla */
     font-size: 16px;
   }
 
+  /* Escalado suave para pantallas medianas/grandes */
+  @media (min-width: 1024px) {
+    :root {
+      font-size: 16px;
+    }
+  }
+
+  /* Solo agrandamos un poco en pantallas realmente grandes (TVs) */
   @media (min-width: 1920px) {
     :root {
-      font-size: 19px;
+      font-size: 18px;
     }
-
-    /* Agranda todo en pantallas grandes */
   }
 
   @media (min-width: 2560px) {
     :root {
-      font-size: 22px;
+      font-size: 20px;
     }
-
-    /* Pantallas 4K y TVs */
-  }
-
-  body {
-    @apply antialiased text-slate-900 dark:text-slate-100 bg-white dark:bg-[#121212];
-    /* Evita que el contenido toque los bordes en móviles */
-    overflow-x: hidden;
   }
 }
 
