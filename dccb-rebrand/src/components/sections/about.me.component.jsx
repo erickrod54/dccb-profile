@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react"; 
 import dccb_about_picture from '../../assets/dccb_about_me_foto.png';
 
-/** DCCB-rebrand - Portfolio version 3.12 - Features: 
+/** DCCB-rebrand - Portfolio version 3.13 - Features: 
  * 
- *    --> Sticky color on Tap/Click (no timer)
- *    --> Auto-reveal color on Scroll (Intersection Observer)
+ *    --> Getting back about me text
  * 
  * Note: 'TailwindTest' is a component to test 
  * tailwind 
@@ -87,13 +86,22 @@ const AboutMeDCCB = () => {
                         <p>
                         Con más de 25 años de trayectoria, mi carrera comenzó en <strong>San Cristóbal, Venezuela</strong>, 
                         liderando firmas multidisciplinarias y coordinando la ejecución de más de 500 proyectos 
-                        urbanísticos y residenciales.
+                        urbanísticos y residenciales. Mi pasión siempre ha sido la precisión técnica: esa línea 
+                        perfecta que permite que una idea se convierta en una estructura sólida.
                         </p>
                         <p>
                         Tras décadas de dirigir equipos de ingeniería y arquitectura, hoy evoluciono mi práctica 
-                        hacia el ecosistema digital global.
+                        hacia el ecosistema digital global. Desde los Estados Unidos, fusiono la disciplina del 
+                        <strong> CAD tradicional</strong> con el potencial disruptivo de la <strong>Inteligencia Artificial</strong>, 
+                        ofreciendo a firmas internacionales un soporte técnico que no solo entiende el dibujo, 
+                        sino que comprende la lógica constructiva detrás de cada plano.
+                        </p>
+                        <p className="font-medium text-slate-800 dark:text-slate-200">
+                        Mi misión es simple: aportar mi experiencia senior para que sus proyectos alcancen la 
+                        máxima claridad técnica y un impacto visual fotorrealista.
                         </p>
                     </div>
+
 
                     <div className="pt-6 border-t border-slate-100 dark:border-white/5">
                         <span className="font-mono text-xs tracking-widest text-slate-400 uppercase">Principal Architect & Founder</span>
